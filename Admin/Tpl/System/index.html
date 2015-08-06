@@ -1,0 +1,28 @@
+<include file="Public:_header"/>
+<script>
+function fold(index) {
+  	$('#app_'+index).slideToggle('fast');
+}
+</script>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="list">
+        <php>$id = 0;</php>
+        <volist name="statistics" id="channel">
+            <php>$index = $id++;</php>
+            <div class="RootName" onclick="fold('{$index}');" title="点击标题可以折叠栏目">{$key}</div>
+            <table id="app_{$index}">
+                <volist name="channel" id="vo">
+                 <tr overstyle="on">
+                    <td align="right" width="150"><strong>{$key}：</strong></td>
+                    <td align="left">{$vo}</td>
+                    </tr>
+                </volist>
+            </table>
+        </volist>
+         <div class="page_tit">Remind：Please note that a regular backup database, backup data can maximize the protection of your site data security. ( <a href="__URL__/backup">Backup Now</a> )</div>
+ </div>
+ </div>
+</body>
+
+</html>

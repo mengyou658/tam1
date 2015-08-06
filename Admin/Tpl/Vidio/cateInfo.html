@@ -1,0 +1,138 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="page_tit">[ <a href="__URL__/cate">{$MenuTitle}Category Management</a> ]  [ <a href="__URL__/cateInfo"><span>Add Top Category</span></a> ] <if condition="$parentRs['id'] gt 0"> [ <a href="__URL__/cateInfo/parentid/{$parentRs['id']}"><span>Add <font color="#BD0000">"{$parentRs.name}"</font> Sub Category</span></a> ]</if></div>
+
+<div class="list">
+	<form id="cate_form" method="post" name="cate_form"
+		action="__URL__/eidt_cate" enctype="multipart/form-data">
+		<table width="100%" cellpadding="5" cellspacing="1">
+			<tr>
+				<td width="10%" align="right"><span class="need">*</span> Category：</td>
+				<td><input type="text" name="name" value="{$vo.name}" id="name"
+					class="txt" /></td>
+			</tr>
+            <if condition="$cid gt 0">
+            <tr>
+				<td width="10%" align="right">Subname：</td>
+				<td><input type="text" name="subname" value="{$vo.subname}" id="subname"
+					class="txt" /></td>
+			</tr>
+            </if>
+			<tr>
+				<td align="right">Sort：</td>
+				<td><input type="text" name="displayorder"
+					value="{$vo.displayorder}" id="displayorder" /></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Status：</td>
+				<td><input name="ischecked" type="radio" id="radio" value="1"
+				<if condition="$vo['ischecked'] eq 1 or $vo['ischecked'] eq ''">checked="checked"</if>
+					class="checkbox"/> Active <input type="radio" name="ischecked"
+					id="radio2" value="0"
+				<eq name="vo['ischecked']" value="0">checked="checked"</eq>
+					class="checkbox"/> Locked</td>
+			</tr>
+            <!--<if condition="$parentRs['id'] eq 0">
+            
+			<tr>
+				<td align="right">Upload Image(PC)：</td>
+				<td><input name="attachment" type="file" id="attachment" /></td>
+			</tr>
+			<tr id="reviewImg" style="display: none">
+				<td align="right">View Image(PC)：</td>
+				<td colspan="3"><img id="viewImg" border="0" /></td>
+			</tr>
+			<if condition="$vo['attachment'] neq ''">
+			<tr id="ImgAttach">
+				<td align="right">Uploaded Image(PC)：</td>
+				<td colspan="3"><span id="attachment_Html"><input
+						type="hidden" name="old_attachment" value="{$vo.attachment}" /><a
+						href="{$vo.attachment}" class="lightbox"><img
+							src="{$vo.attachment}" class="sImg"></a>&nbsp;&nbsp;<input
+						type="button" class="btn_b" name="dels" value=" Delete Image "
+						onclick="MoveHtml('attachment_Html');"></span></td>
+			</tr>
+			</if>
+            
+            <tr>
+				<td align="right">Upload Image(MOBILE)：</td>
+				<td><input name="doAction" type="file" id="doAction" /></td>
+			</tr>
+			<tr id="reviewImg" style="display: none">
+				<td align="right">View Image(MOBILE)：</td>
+				<td colspan="3"><img id="viewImg2" border="0" /></td>
+			</tr>
+			<if condition="$vo['doAction'] neq ''">
+			<tr id="ImgAttach">
+				<td align="right">Uploaded Image(MOBILE)：</td>
+				<td colspan="3"><span id="attachment_Html2"><input
+						type="hidden" name="old_attachment2" value="{$vo.doAction}" /><a
+						href="{$vo.doAction}" class="lightbox"><img
+							src="{$vo.doAction}" class="sImg"></a>&nbsp;&nbsp;<input
+						type="button" class="btn_b" name="dels" value=" Delete Image "
+						onclick="MoveHtml('attachment_Html2');"></span></td>
+			</tr>
+			</if>
+            
+            </if>-->
+            <tr>
+				<td align="right">Module：</td>
+				<td><select name="mid" id="mid">
+						<volist name="moduleList" id="moduleList">
+						<option value="{$moduleList.id}"
+							<eq name="moduleList.id" value="$mid">selected</eq>
+							>{$moduleList.name}
+						</option>
+						</volist>
+				</select></td>
+			</tr>
+            
+            <tr>
+				<td width="10%" align="right"><span class="need">*</span> picture<br>(Size:700px*400px)：</td>
+				<td><div class="upload_btn-group" ><input name="up" type="file" id="up" /></div><div class="picQueue" id="picQueue"></div><div id="uppic" class="outser">
+                {$ImgHtml}
+                </div></td>
+			</tr>
+            
+			<tr>
+				<td align="right">Description：</td>
+				<td>{$editor}</td>
+			</tr>
+            
+			<tr>
+				<td colspan="2" align="center"><input type="hidden" name="tb"
+					id="tb" value="{$tb}" /><input type="hidden" name="cid" id="cid"
+					value="{$cid}" /><input type="hidden" name="id" id="id"
+					value="{$vo.id}" /><input type="submit" class="btn_b" value="Submit" />
+					<input type="button" onclick="history.go(-1)" class="btn_w"
+					value="Back" /></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</div>
+<script>
+$(document).ready(function() {
+	$("#up").uploadify({
+		'uploader'       : '__PUBLIC__/admin/js/JqueryUpload/uploadify.swf',
+		'script'		 : '__APP__/Public/upPics',
+		'scriptData'	 : {'field':'field'},
+		'method'		 : 'GET',
+		'queueID' 		 : 'uppic',		
+		'cancelImg'      : '__PUBLIC__/admin/js/JqueryUpload/cancel.png',
+		'folder'         : "__ROOT__/Attachments/upload/<php>echo date('Ymd');</php>",
+		'buttonImg' 	 : '__PUBLIC__/admin/images/browser.png',
+		'queueID'        : 'picQueue',
+		'fileExt' 		 : '*.jpg;*.gif;*.bmp;*.png',
+		'fileDesc' 		 : '*.jpg;*.gif;*.bmp;*.png',
+		'auto'           : true,
+		'sizeLimit'      : '134217728',
+		'multi'          : true,
+		'onComplete':function(event,queueId,fileObj,response,data){
+			$("#uppic").prepend(response); 
+		}
+	});
+});
+</script>

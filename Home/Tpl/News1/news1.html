@@ -1,0 +1,36 @@
+<include file="Public:top" />
+    <!--content-->
+        <div  class="neiye_content width1">
+        	<div class="neiyecontent_top">
+                <div class="left leftbar">
+                	<h5>时尚资讯</h5>
+                    <p>Fashion News</p>
+                    
+                    <div class="bott"><img src="Public/en/images/list3.png"/></div>
+                </div>
+                <div class="left rightbar">
+                	<div class="rightbar_top">
+                    	<h2><a href="news.html">时尚资讯</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="news.html">时尚资讯</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                    	<div class="zixuncontent">
+                            <volist name="catePics" id="vo" key="k">
+                            <h6>{$vo.name}</h6>
+                            <div class="time">{$vo.postdate}</div>
+                            <div class="zixun_img"><img src="{$vo.attachment}"/></div>
+                            {$cate[$k-1].content}
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <include file="Public:end" />

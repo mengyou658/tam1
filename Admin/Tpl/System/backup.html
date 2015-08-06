@@ -1,0 +1,124 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="form2">
+  <!-- 备份选项 -->
+  <div id="begin_backup" style="display:none;">
+    <div class="page_tit">Backup options [ <a href="javascript:void(0);" onclick="$('#begin_backup').slideUp();">Hide</a> ]</div>
+    
+    <div class="form2">
+    <form method="post" action="__URL__/doBackUp">
+    <dl class="lineD">
+      <dt>Option: </dt>
+      <dd>
+        <input name="backup_type" type="radio" value="all" checked onclick="$('#backup_size').removeClass('lineD');$('#backup_table').slideUp();">All Backup<br/>
+        <input name="backup_type" type="radio" value="custom" onclick="$('#backup_size').addClass('lineD');$('#backup_table').slideDown();">Select the backup
+      </dd>
+    </dl>
+    <dl class="" id="backup_size">
+      <dt>Volume size: </dt>
+      <dd>
+        <input type="text" name="sizelimit" value="1000"> K
+      </dd>
+    </dl>
+    <dl class="" id="backup_table" style="display:none">
+        <dt>Database table: </dt>
+        <dd>
+        <volist name="table" id="vo">
+            <input type="checkbox" name="backup_table[]" value="{$vo.Name}">{$vo.Name} ( {$vo['Data_length']|formatsize} )<br/>
+        </volist>
+        </dd>
+    </dl>
+    <div class="page_btm">
+      <input type="submit" class="btn_b" value="Submit" />
+    </div>
+    </form>
+  </div>
+  </div>
+  
+  <div class="page_tit">Database Backup</div>
+  <div class="Toolbar_inbox">
+    <a href="javascript:void(0);" class="btn_a" onclick="$('#begin_backup').slideDown();"><span>Start Backup</span></a>
+    <a href="javascript:void(0);" class="btn_a" onclick="delsql();"><span>Delete Backup</span></a>
+  </div>
+  
+  <div class="list">
+  <table id="backup_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th style="width:30px;">
+        <input type="checkbox" id="checkbox_handle" onclick="checkAll(this)" value="0">
+        <label for="checkbox"></label>
+    </th>
+    <th class="line_l">Filename(data/database/...)</th>
+    <th class="line_l">Backup Time</th>
+    <th class="line_l">File Size</th>
+    <th class="line_l">Option</th>
+  </tr>
+  <volist id="vo" name="log">
+      <php>$filename = substr($vo['filename'], 0, -4);</php>
+      <tr overstyle='on' id="backup_{$filename}">
+        <td><input type="checkbox" name="checkbox" id="checkbox2" onclick="checkon(this)" value="{$filename}"></td>
+        <td><a href="<php>echo '/data/database/'.$vo['filename'];</php>" title="Download" target="_blank">{$vo.filename}</a></td>
+        <td>{$vo.addtime}</td>
+        <td>{$vo.filesize}</td>
+        <td>
+            <a href="<php>echo '/data/database/'.$vo['filename'];</php>">Download</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="__URL__/import/filename/{$vo.filename}">Restore the backup</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delsql('{$filename}');">Delete</a>
+        </td>
+      </tr>
+  </volist>
+  </table>
+
+  </div>
+  <div class="Toolbar_inbox">
+    <a href="javascript:void(0);" class="btn_a" onclick="$('#begin_backup').slideDown();"><span>Start Backup</span></a>
+    <a href="javascript:void(0);" class="btn_a" onclick="delsql();"><span>Delete Backup</span></a>
+  </div>
+</div>
+</div>
+<script>
+
+//删除备份文件
+function delsql(bid)
+{
+	bid = bid ? bid : getChecked();
+	bid = bid.toString();
+	if(bid == '')
+	{
+		alert("请至少选择一个文件");
+		return false;
+	}
+	if(!confirm('删除后无法恢复，确定删除？'))
+		return false;
+
+	//提交删除
+	$.post("__URL__/doDeleteBackUp", {selected:bid}, function(res)
+	{
+		if(res == '1')
+		{
+			bid = bid.split(',');
+			$.each(bid, function(i,n)
+			{
+				$('#backup_'+n).remove();
+			});
+			ui.success('删除成功');
+		}
+		else 
+		{
+			ui.error('删除失败');
+		}
+	});
+}
+
+function importsql( filename )
+{
+	if(!confirm('导入后数据库数据将被完全覆盖，确定导入？'))
+		return false;
+
+	window.location.href = "__URL__/import/filename/" + filename;
+}
+    
+ 
+</script>
+
+</body>
+</html>

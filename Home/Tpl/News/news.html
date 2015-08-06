@@ -1,0 +1,60 @@
+<include file="Public:top" />
+    <!--content-->
+        <div  class="neiye_content width1">
+        	<div class="neiyecontent_top">
+                <div class="left leftbar">
+                	<h5>时尚资讯</h5>
+                    <p>Fashion News</p>
+                    
+                    <div class="bott"><img src="Public/en/images/list3.png"/></div>
+                </div>
+                <div class="left rightbar">
+                	<div class="rightbar_top">
+                    	<h2><a href="#">时尚资讯</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="#">时尚资讯</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                    	<div class="fashionnews">
+                        	<ul class="eachnew">
+                            	<li>
+                                    <volist name="a" id="vo">
+                                	<table>
+                                    	<tr >
+
+                                        	<td  valign="top" align="left"><div class="nw_img"><a href="news1.html"><img src="{$vo.attachment}"/></a></div></td>
+                                            <td valign="top" align="left"  style="padding-left:20px;">
+                                                    <h6><a href="news1.html">{$vo.name}</a></h6>
+                                                    <p>{$vo.content}</p>
+                                                    <div class="eachmore"><a href="news1.html"><img src="Public/en/images/newsmore.png"/></a></div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </volist>
+                                </li>
+                            </ul>
+                            <div class="pagenum">
+                            	<div class="fir-las left"><a href="#">首页</a></div>
+                                <ul class="left">
+                                	
+                                	<li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    
+                                </ul>
+                                <div class="fir-las left"><a href="#">下一页</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <include file="Public:end" />

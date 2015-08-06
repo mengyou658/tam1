@@ -1,0 +1,953 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"p",
+				"parentid"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"acce",
+				"access_token"
+			],
+			[
+				"corp",
+				"corp_secret"
+			],
+			[
+				"err",
+				"error_reporting"
+			],
+			[
+				"new",
+				"new_record"
+			],
+			[
+				"li",
+				"lineArray"
+			],
+			[
+				"i",
+				"image"
+			],
+			[
+				"fir",
+				"firstImage"
+			],
+			[
+				"dir",
+				"directories"
+			],
+			[
+				"comp",
+				"company"
+			],
+			[
+				"CU",
+				"CURLOPT_HEADER"
+			],
+			[
+				"CUR",
+				"CURLOPT_RETURNTRANSFER"
+			],
+			[
+				"curl",
+				"curl_setopt"
+			],
+			[
+				"array_p",
+				"array_pop"
+			],
+			[
+				"tr",
+				"try	Wrap in try { … } catch (…) { … }"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"f",
+				"foreach	foreach …"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"Re",
+				"Response"
+			],
+			[
+				"back",
+				"backupFiles"
+			],
+			[
+				"sys",
+				"system"
+			],
+			[
+				"View",
+				"View-make	View-make"
+			],
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"mb_co",
+				"mb_convert_encoding"
+			],
+			[
+				"_",
+				"$_	FILES['…']"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Documents and Settings/Administrator/桌面/模块添加.txt",
+			"settings":
+			{
+				"buffer_size": 56,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"xd",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pc",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pci",
+				"Package Control: List Packages"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssp",
+				"Set Syntax: PHP"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"pgl",
+				"Package Control: List Packages"
+			],
+			[
+				"pgi",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"pg",
+				"Package Control: Install Package"
+			],
+			[
+				"ss",
+				"Set Syntax: ASP"
+			],
+			[
+				"sets",
+				"Set Syntax: HTML"
+			],
+			[
+				"pk",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 188.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/site/voliving.ca/Home/Tpl/Mantel/index.html",
+		"/F/site/voliving.ca/Home/Lib/Action/MantelAction.class.php",
+		"/F/site/voliving.ca/Home/Lib/Action/IndexAction.class.php",
+		"/F/site/voliving.ca/Admin/Tpl/Mantel/index.html",
+		"/F/site/voliving.ca/Admin/Lib/Action/MantelAction.class.php",
+		"/F/site/voliving.ca/Admin/Lib/Action/IndexAction.class.php",
+		"/F/site/voliving.ca/ThinkPHP/Lib/Core/Think.class.php",
+		"/C/Documents and Settings/Administrator/桌面/模块添加.txt",
+		"/F/site/voliving.ca/ThinkPHP/Common/common.php",
+		"/F/site/voliving.ca/ThinkPHP/Lib/Core/Action.class.php",
+		"/F/site/voliving.ca/ThinkPHP/Lib/Core/App.class.php",
+		"/F/site/voliving.ca/Admin/Common/common.php",
+		"/F/site/voliving.ca/admin.php",
+		"/F/site/voliving.ca/Admin/Conf/config.php",
+		"/F/site/voliving.ca/Admin/Lib/Action/BannerAction.class.php",
+		"/F/site/voliving.ca/sublime_config.sublime-project",
+		"/F/site/voliving.ca/ThinkPHP/Lib/Driver/Db/DbMysql.class.php",
+		"/F/site/voliving.ca/ThinkPHP/Lib/Core/Db.class.php",
+		"/F/site/voliving.ca/database.inc.php",
+		"/D/xampp/php/php.ini",
+		"/F/site/voliving.ca/index.php",
+		"/F/site/voliving.ca/Admin/Lib/Action/ModuleAction.class.php",
+		"/D/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/F/site/voliving.ca/Public/admin/js/JqueryUpload/jquery.uploadify.v2.0.3.js",
+		"/F/site/voliving.ca/Public/admin/js/JqueryUpload/jquery.uploadify.v2.1.0.min.js",
+		"/F/site/voliving.ca/Public/admin/js/JqueryUpload/swfobject.js",
+		"/C/Documents and Settings/Administrator/桌面/uploadify/uploadify.php",
+		"/C/Documents and Settings/Administrator/桌面/uploadify/jquery.uploadify.js",
+		"/C/Documents and Settings/Administrator/桌面/uploadify/jquery.uploadify.min.js",
+		"/F/site/voliving.ca/Admin/Tpl/Public/_header.html",
+		"/D/Program Files/Sublime Text 2.0.2/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/F/site/voliving.ca/Public/admin/js/JqueryUpload/uploadify.php.dump",
+		"/F/site/voliving.ca/Public/admin/js/JqueryUpload/uploadify.php",
+		"/C/Documents and Settings/Administrator/桌面/t.html",
+		"/C/Documents and Settings/Administrator/桌面/voliving.sql",
+		"/F/site/voliving.ca/pclzip.lib.php",
+		"/C/Documents and Settings/Administrator/桌面/config.inc.php",
+		"/C/Documents and Settings/Administrator/桌面/export.php",
+		"/C/Documents and Settings/Administrator/桌面/backup.php",
+		"/C/Documents and Settings/Administrator/桌面/bigdump/bigdump.php",
+		"/C/Documents and Settings/Administrator/桌面/bigdump/database.inc.php",
+		"/C/Documents and Settings/Administrator/桌面/phpMyBackupPro-2.5/phpMyBackupPro-2.5/README.txt",
+		"/C/Documents and Settings/Administrator/桌面/phpMyBackupPro-2.5/phpMyBackupPro-2.5/doc/INSTALL.txt",
+		"/C/Documents and Settings/Administrator/桌面/info.txt.dump",
+		"/D/我的文档/database.inc.php",
+		"/C/Documents and Settings/Administrator/桌面/info.txt",
+		"/C/Documents and Settings/Administrator/桌面/app/app/Home/View/default/Public/css/index.css",
+		"/C/Documents and Settings/Administrator/桌面/app/app/Home/View/default/Public/css/default.css",
+		"/C/Documents and Settings/Administrator/桌面/新建 文本文档.txt",
+		"/C/Documents and Settings/Administrator/桌面/flash_fix.js.dump",
+		"/C/Documents and Settings/Administrator/桌面/flash_fix.js",
+		"/C/Documents and Settings/Administrator/桌面/新建 文本文档 (2).txt",
+		"/C/Documents and Settings/Administrator/桌面/new.html",
+		"/C/Documents and Settings/Administrator/桌面/TET/404.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/about.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/contact.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/culture.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/business.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/artview.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/partners.php",
+		"/C/Documents and Settings/Administrator/桌面/dbconn.php",
+		"/C/Documents and Settings/Administrator/桌面/test.php",
+		"/C/Documents and Settings/Administrator/桌面/css_cn.css",
+		"/C/Documents and Settings/Administrator/桌面/TET/news.php",
+		"/C/Documents and Settings/Administrator/桌面/TET/job.php",
+		"/F/site/www.winpal.hk.cn/Admin/Lib/ORG/Module.class.php",
+		"/F/site/www.winpal.hk.cn/Admin/Lib/Action/ProductAction.class.php",
+		"/C/Documents and Settings/Administrator/桌面/comtop.php",
+		"/C/Documents and Settings/Administrator/桌面/index.php",
+		"/F/site/www.winpal.hk.cn/Admin/Lib/Action/GlobalAction.class.php",
+		"/F/site/www.winpal.hk.cn/Admin/Tpl/Product/edit.html",
+		"/C/Documents and Settings/Administrator/桌面/binflash.js.dump",
+		"/C/Documents and Settings/Administrator/桌面/binflash.js",
+		"/F/site/www.winpal.hk.cn/Admin/Runtime/Cache/0aaf548f371f3c540aac62eef29107ae.php",
+		"/C/Documents and Settings/Administrator/桌面/jquery.uploadify-v2.1.0/jquery.uploadify.v2.1.0.js",
+		"/F/site/www.winpal.hk.cn/Public/admin/js/JqueryUpload/jquery.uploadify.v2.1.0.min.js",
+		"/F/site/www.winpal.hk.cn/Public/admin/css/uploadcss/default.css.dump",
+		"/F/site/www.winpal.hk.cn/Public/admin/js/JqueryUpload/swfobject.js",
+		"/F/site/www.winpal.hk.cn/Public/admin/css/uploadcss/uploadify.css",
+		"/F/site/www.winpal.hk.cn/Public/admin/css/uploadcss/default.css",
+		"/C/Documents and Settings/Administrator/桌面/crossdomain.xml",
+		"/F/site/www.winpal.hk.cn/config_en.inc.php",
+		"/C/Documents and Settings/Administrator/桌面/app/app/Admin/Controller/IndexController.php",
+		"/C/Documents and Settings/Administrator/桌面/jee_user.txt",
+		"/C/Documents and Settings/Administrator/桌面/index.htm.dump",
+		"/C/Documents and Settings/Administrator/桌面/index.htm",
+		"/C/Documents and Settings/Administrator/桌面/lotteryGame/css/main.css",
+		"/C/Documents and Settings/Administrator/桌面/lotteryGame/index.html",
+		"/F/contact.php",
+		"/F/dbconn.php",
+		"/C/Documents and Settings/Administrator/桌面/lotteryGame/js/my.js",
+		"/C/Documents and Settings/Administrator/桌面/jee_user_0707.sql",
+		"/C/Documents and Settings/Administrator/桌面/lotteryGame/js/ad_demo.js",
+		"/C/Documents and Settings/Administrator/桌面/lottery/index.html",
+		"/C/Documents and Settings/Administrator/桌面/lotteryGame/js/tongji.js",
+		"/C/Documents and Settings/Administrator/桌面/柯泽楷个人博客/柯泽楷个人博客/mysql配置.txt.dump",
+		"/C/Documents and Settings/Administrator/桌面/柯泽楷个人博客/柯泽楷个人博客/mysql配置.txt",
+		"/C/Documents and Settings/Administrator/桌面/index.html",
+		"/F/index.htm.dump",
+		"/F/index.htm",
+		"/C/Documents and Settings/Administrator/桌面/flash_fix.txt.dump",
+		"/C/Documents and Settings/Administrator/桌面/flash_fix.txt",
+		"/F/index.php",
+		"/F/site/www.langmacn.com/Home/Tpl/Article/read.html",
+		"/F/site/www.langmacn.com/Home/Tpl/Index/index.html",
+		"/F/site/www.langmacn.com/Home/Tpl/Product/index.html",
+		"/F/site/www.langmacn.com/Home/Tpl/Product/read.html",
+		"/F/site/www.langmacn.com/Home/Tpl/About/contact.html",
+		"/F/site/www.langmacn.com/Home/Tpl/About/index.html",
+		"/F/site/www.langmacn.com/Home/Tpl/About/service.html",
+		"/F/site/www.langmacn.com/Home/Tpl/Article/download.html",
+		"/F/site/www.langmacn.com/Home/Tpl/Article/index.html",
+		"/D/Program Files/FlashFXP/注册码.txt",
+		"/C/Documents and Settings/Administrator/桌面/contact.html",
+		"/C/Documents and Settings/Administrator/桌面/alipay_1.1_beta/使用声明.txt.dump",
+		"/C/Documents and Settings/Administrator/Local Settings/Temp/Rar$DIa0.077/使用声明.txt.dump",
+		"/C/Documents and Settings/Administrator/桌面/alipay_1.1_beta/使用声明.txt",
+		"/C/Documents and Settings/Administrator/Local Settings/Temp/Rar$DIa0.077/使用声明.txt",
+		"/C/Documents and Settings/Administrator/桌面/bfsm2.htm.dump",
+		"/C/Documents and Settings/Administrator/桌面/bfsm/h.html",
+		"/C/Documents and Settings/Administrator/桌面/bfsm2.htm",
+		"/C/Documents and Settings/Administrator/桌面/关于未备案客户登录企业邮箱的办法说明.htm.dump",
+		"/C/Documents and Settings/Administrator/桌面/关于未备案客户登录企业邮箱的办法说明.files/themedata.thmx",
+		"/C/Documents and Settings/Administrator/桌面/关于未备案客户登录企业邮箱的办法说明.htm",
+		"/C/Documents and Settings/Administrator/桌面/PHPExcel_1.8.0_doc/Examples/01pharSimple.php.dump",
+		"/C/Documents and Settings/Administrator/桌面/至尚/旧的-以此为准.txt.dump",
+		"/C/Documents and Settings/Administrator/桌面/至尚/旧的-以此为准.txt",
+		"/C/Documents and Settings/Administrator/桌面/product_2015-06-29_112446.csv"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"F:\\site\\voliving.ca\\admin\\",
+			"F:\\site\\voliving.ca\\Public\\admin\\",
+			"F:\\site\\voliving.ca",
+			"C:\\Documents and Settings\\Administrator\\桌面\\TET",
+			"F:\\site\\www.winpal.hk.cn\\Public\\admin\\js\\JqueryUpload",
+			"F:\\site\\www.winpal.hk.cn",
+			"E:\\site\\www.iemail.net.cn\\www.ichance.net.cn",
+			"E:\\site\\www.weimob.com\\public",
+			"E:\\site\\www.weimob.com\\public,weimob*.html",
+			"E:\\site\\www.weimob.com\\public,weimob-*.html",
+			"E:\\site\\www.chance.net.cn",
+			"E:\\site\\www.weimob.com",
+			"F:\\site\\www.zryy168.com\\htdocs",
+			"E:\\upupw\\vhosts\\local.presta.com\\",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\t",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs,-*.js",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs\\virtual.html",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs,-*.js",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs\\",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs\\*html",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs\\*.html",
+			"E:\\site\\www.iemail.net.cn\\iemail.net.cn.0507\\htdocs",
+			"F:\\monster\\info\\wordpress",
+			"D:\\BDdownloads\\ha_dbadmin23\\dbadmin",
+			"E:\\upupw\\vhosts\\local.presta.com",
+			"C:\\Documents and Settings\\Administrator\\桌面\\inc",
+			"E:\\upupw\\vhosts\\local.presta.com",
+			"C:\\Downloaded Web Sites\\www.coremail.cn",
+			"E:\\site\\dianquan.net.cn",
+			"F:\\mail"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"vo",
+			"getMenuList",
+			"port",
+			"super_globals",
+			"port",
+			"9000",
+			"port",
+			"url",
+			"xdebug",
+			"settings",
+			"mdR2aGfZDHx4e6ym",
+			"weimob.net.cn",
+			"E:\\site\\www.weimob.com\\public",
+			"sameDomain",
+			"always",
+			"scriptAccess",
+			"object",
+			"jquery.uploadify.v2.1.0.min.js",
+			"uploadify.php",
+			"object",
+			"embed",
+			"object",
+			"pear",
+			"php",
+			"PEAR",
+			"\\xampp\\php\\pear",
+			"db86040",
+			".normalInput{float: left;position: relative;display: inline-block;padding: 0px 10px;height: 50px;line-height: 22px;font-size: 16px;margin-bottom: 20px;border: 1px solid #dadada;outline: none;color: #474747;overflow: visible;}",
+			"contact_bg",
+			"bag",
+			"phpinfo",
+			"binflash.js",
+			"writeflashhtml",
+			"DRs",
+			"edit",
+			"embed",
+			"clsid",
+			"object",
+			"param",
+			"param name=\"quality\"",
+			"uploadify",
+			"object",
+			"embed",
+			"uploadify.swf",
+			".swf",
+			"');",
+			");",
+			"document.write('",
+			"');\n",
+			"true",
+			"show",
+			"png",
+			"gif",
+			"jpg",
+			"png",
+			"');",
+			"//   document.write('",
+			"// document.write('",
+			"swf_width",
+			"swf",
+			"vo.content",
+			"Maple",
+			",",
+			"http://121.41.119.68:5054",
+			"					'",
+			"',",
+			"&",
+			".iemail.net.cn",
+			"chance.net.cn",
+			"iemail.net.cn",
+			"website",
+			"<link href=\"assets/css/chance.css\" rel=\"stylesheet\">",
+			"Copyright 2014 Chance·创思 版权所有 All Rights Reserved. 粤ICP备14024662号-1<!--粤B2-20070006 粤ICP备08105799号--><img src=\"images/beian.jpg\"></img>",
+			"Chance创思（广州市志尚品牌策划有限公司深圳分公司）",
+			"广州市志尚品牌策划有限公司深圳分公司",
+			"Chance创思（广州市志尚品牌策划有限公司深圳分公司）",
+			"广州市志尚品牌策划有限公司深圳分公司",
+			"广州华易品牌策划有限公司",
+			".js",
+			".php",
+			"vdimgck",
+			"^#.*",
+			"^#",
+			"vo",
+			"粤B2-20070006 粤ICP备08105799号",
+			"content",
+			"script",
+			"云建站",
+			"云",
+			"processing/",
+			"processingdata/",
+			"processingdata",
+			"processdata",
+			"深圳市创思网航信息技术有限公司",
+			"					 <li><a href=\"server-intro.html\">云主机</a></li>\n\n					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>",
+			"企业邮箱</a>",
+			"					 <li><a href=\"server-intro.html\">云主机</a></li>\n					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>",
+			"					 <li><a href=\"server-intro.html\">云主机</a></li>\n					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>					 <li><a href=\"server-intro.html\">云主机</a></li>\n					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>",
+			"echo '<br/>';",
+			"department_id",
+			"agent_id",
+			"text",
+			"agent_id",
+			"safe",
+			"id",
+			"order",
+			"to_tag",
+			"parentid",
+			"name",
+			"createDepartment",
+			"name",
+			"testDepartment",
+			"test",
+			"name",
+			"pDepartmentId",
+			"pAccessToken",
+			"accessToken",
+			"isUseCachedData",
+			"pSecret",
+			"pCorpId",
+			"pSecret",
+			"pCorpId",
+			"curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);",
+			"curl_setopt($ch, CURLOPT_URL, $url);",
+			"corpId",
+			"br",
+			"API_GET_TOKEN_URL",
+			"include_once"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"binflash1.js",
+			"",
+			"\\n",
+			"http://121.41.119.68:5055",
+			"ps_",
+			"",
+			"\\n",
+			"Copyright 2012  Chance·创思  版权所有 All Rights Reserved. 电信与信息服务业务经营许可证编号为：粤B2-20070006，<a href=\"beian/jyxkz.html\" style=\"background-image:URL('')\">点击验证资质</a> <a href=\"http://www.miitbeian.gov.cn/\" target=\"_blank\">粤ICP备08105799号</a>",
+			"",
+			"粤ICP备14024662号-1<!--粤B2-20070006 粤ICP备08105799号-->",
+			"processing/",
+			"					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>\n\n					 <li><a href=\"server-intro.html\">云主机</a></li>",
+			"					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>\n					 <li><a href=\"server-intro.html\">云主机</a></li>",
+			"API_",
+			"_API",
+			"_MENU",
+			"_MESSAGE",
+			"_TAG",
+			"_DEPARTMENT",
+			"_USER",
+			"_URL\n_URL\n_USER",
+			"_URL",
+			"Api",
+			"?\");",
+			"\",\"",
+			"define(\"$api",
+			"http://stc.weimob.com",
+			"					 <li><a href=\"netease-intro.html\">企业邮箱</a></li>\n					 <li><a href=\"weimob.html\">微网站</a></li>",
+			"weimob-help.html",
+			"weimob-package.html",
+			"weimob-case1.html",
+			"weimob-guide1.html",
+			"weimob.html",
+			"",
+			"&quot;",
+			"10001",
+			"000",
+			"",
+			"\\\"",
+			";",
+			"",
+			"<script type='text/javascript' src='http://a.ad7.com/js/i.js?uid=iyvy' id='_mutmzc'></script>\n</html>",
+			".html",
+			"url(",
+			"href=\"",
+			"src=\"",
+			"href='",
+			"'",
+			"",
+			"'折扣';",
+			"'浏览';",
+			"'列表';",
+			"'表格';",
+			"'最畅销产品';",
+			"您",
+			"'在 %s 中显示子分类:';",
+			"'无';",
+			"'快捷结算';",
+			"'如你刚下订单, 需要一段时间进行校验. 如订单丢失请重新刷新页面.';",
+			"'要跟踪你的订单, 请输入下列信息:';",
+			"'例如: QIIXJXNUI 或 QIIXJXNUI#1';",
+			"'你账号创建以来所下的订单.';",
+			"'你尚未下任何订单.';",
+			"'详情';",
+			"'请确保更新你的个人信息如发生任何的改变.';",
+			"'E-mail 地址';",
+			"'由于网站维护的需要，我们的店铺临时关闭.';",
+			"'请稍后再试,为此带来的不便我们深感抱歉.';",
+			"'欢迎使用你的账号. 你可在此管理你所有的个人信息和订单.';",
+			"'某些产品的数量已经更改.请查看';",
+			"'请通过选择一个地址开始';",
+			"'配送方式';",
+			"'选择一个配送选项';",
+			"'留言';",
+			"'服务条款';",
+			"'一步步跟踪你的订单状态';",
+			"'点击下列连接跟踪你的订单配送';",
+			"'信息';",
+			"'如你想给你的订单添加一条评论, 请在下面填写.';",
+			"'新客户';",
+			"'马上创建使用你的账号';",
+			"'快捷结算';",
+			"'增值税号';",
+			"'帐号信息保存成功.';",
+			"'你的新订单未被接受.';",
+			"'你的购物车是空的.';",
+			"'已被选选择';",
+			"'你的该次订购无需接受此服务条款';",
+			"'有 ';",
+			"'错误';",
+			"'请打印出';",
+			"'如你有任何问题，请告知我们.';",
+			"'你的密码已经成功重置，确认信将发送到你的email地址:';",
+			"'一封确认email将发送到你的地址:';",
+			"'请输入你注册所使用的email地址. 我们将给你发送一个新的密码. ';",
+			"'比较';",
+			"'快速查看';",
+			"'移除';",
+			"'价格: 从最高到最低';",
+			"'价格: 从最低到最高';",
+			"'产品名称: Z 到 A';",
+			"'产品名称: A 到 Z';",
+			"'新品';",
+			"'查看大图';",
+			"'显示所有图片';",
+			"'更多详情';",
+			"'警告: 最后一件存货!';",
+			"'每';",
+			"'该产品不独立销售. 你必须选择至少';",
+			"'该产品数量.';",
+			"'允许的文件格式为: GIF, JPG, PNG';",
+			"'返回到前一页面';",
+			"'已经找到 %d 结果.';",
+			"'已经找到 %d 个结果.';",
+			"'本店未接受你的新订单.';",
+			"'可选.';",
+			"'总价';",
+			"'总价 (不含税.)';",
+			"'查看新产品';",
+			"'查看制造商列表';",
+			"'制造商';",
+			"'查看供应商列表';",
+			"'供应商';",
+			"'地址, 邮编, 城市, 省或国家';",
+			"'你是否确认? 如果你关闭该窗口, 该位置将不被保存';",
+			"'有 %d 个供应商.';",
+			"'有 %d 供应商.';",
+			"'没有任何供应商.';"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Documents and Settings/Administrator/桌面/模块添加.txt",
+					"settings":
+					{
+						"buffer_size": 56,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.unsaved_changes":
+	{
+		"height": 178.0
+	},
+	"output.xdebug":
+	{
+		"height": 178.0
+	},
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"cont",
+				"contact.php"
+			],
+			[
+				"about",
+				"about.php"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"config",
+				"qiyehao/interface/config.php"
+			],
+			[
+				"composer",
+				"composer.json"
+			],
+			[
+				"frontcontr",
+				"vendor/frozennode/administrator/src/controllers/AdminController.php"
+			],
+			[
+				"admincontro",
+				"vendor/frozennode/administrator/src/controllers/AdminController.php"
+			],
+			[
+				"route",
+				"app/routes.php"
+			],
+			[
+				"authc",
+				"app/controllers/admin/AuthController.php"
+			],
+			[
+				"login",
+				"app/views/admin/login.blade.php"
+			],
+			[
+				"def",
+				"app/views/admin/_layouts/default.blade.php"
+			],
+			[
+				"auth",
+				"app/config/auth.php"
+			],
+			[
+				"app",
+				"app/config/app.php"
+			],
+			[
+				"jyggen/curl/src/cur",
+				"vendor/jyggen/curl/src/Curl.php"
+			],
+			[
+				"curl/src/rs",
+				"vendor/jyggen/curl/src/Response.php"
+			],
+			[
+				"facade/re",
+				"vendor/laravel/framework/src/Illuminate/Support/Facades/Response.php"
+			],
+			[
+				"app.",
+				"app/config/app.php"
+			],
+			[
+				"routes",
+				"app/routes.php"
+			],
+			[
+				"urlge",
+				"vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php"
+			],
+			[
+				"facade/ur",
+				"vendor/laravel/framework/src/Illuminate/Support/Facades/URL.php"
+			],
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"roue",
+				"app/routes.php"
+			],
+			[
+				"local",
+				"vendor/league/flysystem/src/Adapter/Local.php"
+			],
+			[
+				"auto",
+				"vendor/composer/autoload_classmap.php"
+			],
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true
+}

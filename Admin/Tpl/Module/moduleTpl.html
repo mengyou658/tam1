@@ -1,0 +1,44 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="form">
+
+<h3> [ <a href="__URL__"><span>{$MenuTitle}管理</span></a> ]  >> [ <span>{$MenuTitle}模版管理</span> ]</h3>
+
+<div class="list">
+	<div class="Toolbar_inbox">模版列表</div>
+	<div class="spaceLine"></div>
+      <table width="100%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+        <tr align="center" bgcolor="#FFFFFF">
+          <td width="8%">操作</td>
+          <td width="50%">名称</td>
+          <td width="10%">排序</td>
+          <td width="8%">删除</td>
+          </tr>
+		 <volist name="lists" id="list">
+        <tr align="center" bgcolor="#FFFFFF">
+          <td align="left"><a href="__URL__/infoFields/id/{$list.id}">管理模版</a> <eq name="list['issys']" value="1"><img src="__PUBLIC__/admin/images/icon_sys.gif"></eq></td>
+          <td>{$list.name}</td>
+          <td>{$list.sort}</td>
+          <td><a href="__URL__/TplDel/id/{$list.id}"><img src="__PUBLIC__/admin/images/no.gif"></a></td>
+          </tr>
+		  </volist>
+      </table>
+    <div class="spaceLine"></div>
+	<div class="Toolbar_inbox">新增模版</div>
+	<div class="spaceLine"></div>
+	
+	<form name="form2" method="post" action="__URL__/TplAE" onSubmit="return CheckForm(this)">
+	  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">模版名称：
+            <input name="name" id="name" type="text" size="30" check="^\S+" warning="请填写模版名称">
+            排序：
+            <input name="sort" id="sort" type="text" value="1" size="10">
+            <input type="submit" class="btn_b" name="Submit" value=" 提 交 "></td>
+        </tr>
+      </table>
+    </form>
+    </div>
+    </div>
+ </div>

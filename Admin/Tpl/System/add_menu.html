@@ -1,0 +1,86 @@
+<div id="createFollowGroup2"  class="list">
+<form id="menu_form" action="" method="post">
+	<table width="280">
+        <tr>
+	<td align="right"> <if condition="$gid">修改菜单：<else />新增菜单：</if></td>
+    <td align="left"><input type="text" name="name" value="{$vo.name}" id="name" class="text"/></td>
+    </tr>
+    <tr>
+	<td align="right"> 所属菜单：</td>
+    <td align="left">
+    	<select name="cid" id="cid">
+    	<option value="0">第一级菜单</option>
+        <volist name="list" id="list">
+        <option value="{$list.id}" <eq name="vo.cid" value="$list['id']">selected="selected"</eq>>{$list.name}</option>
+        </volist>
+        </select>
+    	</td></tr>
+     <tr>
+	<td align="right"> 链接：</td>
+    <td align="left"><input type="text" name="url" value="{$vo.url}" id="url" class="text"/></td></tr>
+    <tr>
+	<td align="right"> Icon：</td>
+    <td align="left">
+    	<php>
+        	for($i=0; $i<10; $i++) { 
+        </php>
+        <input name="logoimg" type="radio" id="radio" value="{$i}" <eq name="vo['logoimg']" value="$i">checked="checked"</eq> class="checkbox" /> <img src="__PUBLIC__/admin/images/icon/00{$i}.png" style="width:30px; height:30px;" />&nbsp;
+        	<eq name="i" value="4"><br /></eq>
+        <php>
+        	}
+        </php>
+</td></tr>
+    <tr>
+	<td align="right"> 排序：</td>
+    <td align="left"><input type="text" name="sort" value="{$vo.sort}" id="sort" class="text"/></td></tr>
+    <tr>
+	<td align="right"> 状态：</td>
+    <td align="left"><input name="ischecked" type="radio" id="radio" value="1" <eq name="vo['ischecked']" value="1">checked="checked"</eq> class="checkbox" />
+正常
+<input type="radio" name="ischecked" id="radio2" value="0"  <eq name="vo['ischecked']" value="0">checked="checked"</eq> class="checkbox"/>
+锁定</td></tr>
+	<tr><td colspan="2" align="center"><input type="hidden" name="vid" id="vid" value="{$vo.id}" /><input type="submit"  class="btn_b" value="确定" />
+	<input type="button" onclick="ui.box.close()" class="btn_w" value="取消" /></td></tr>
+    </table>
+    </form>
+</div>
+<script>
+$(document).ready(function(){
+var options = {
+			    	type: 'post',
+			    	url: '__URL__/doSysMenu',
+				    dataType: 'json',
+				    success: showResponse
+			 };
+			$('#menu_form').submit(function() {
+			    $(this).ajaxSubmit(options);
+			    return false;
+			}); 
+	}); 
+		
+function showResponse(txt)
+{
+	if(txt.status=='0')
+	{
+		ui.error("菜单名称必须");
+	}
+	else if(txt.status=='1')
+	{
+		ui.error("链接必须");
+	}
+	else if(txt.status=='2')
+	{
+		ui.error("修改失败");
+	}
+	else if(txt.status=='3')
+	{
+		ui.error("更新失败");
+	} 
+	else
+	{
+		ui.success('操作成功');
+		ui.box.close();
+		window.location.href=window.location.href;
+	}
+}
+</script>

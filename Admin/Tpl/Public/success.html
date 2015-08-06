@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+<head>
+<title>Page Notice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv='Refresh' content='{$waitSecond};URL={$jumpUrl}'>
+<load href ="__PUBLIC__/admin/css/notice.css" />
+</head>
+<body>
+<div class="message">
+<table class="message"  cellpadding=0 cellspacing=0 >
+	<tr>
+		<td height='5'  class="topTd" ></td>
+	</tr>
+	<tr class="row" >
+		<th class="tCenter space">{$msgTitle}</th>
+	</tr>
+	<present name="message" >
+	<tr class="row">
+		<td style="color:blue">{$message}</td>
+	</tr>
+	</present>
+	<present name="error" >
+	<tr class="row">
+		<td style="color:red">{$error}</td>
+	</tr>
+	</present>
+	<present name="closeWin" >
+		<tr class="row">
+		<td>The page will close after <span style="color:blue;font-weight:bold">{$waitSecond}</span> second，if you are not want to wait,you can click <a href="{$jumpUrl}">here</a> close </td>
+	</tr>
+	</present>
+	<notpresent name="closeWin" >
+	<tr class="row">
+		<td>The page will jump after  <span style="color:blue;font-weight:bold">{$waitSecond}</span> second，if you are not want to wait,you can click <a href="{$jumpUrl}">here</a> jump</td>
+	</tr>
+	</notpresent>
+	<tr>
+		<td height='5' class="bottomTd"></td>
+	</tr>
+	</table>
+</div>
+</body>
+</html>

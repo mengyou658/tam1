@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/F/site/voliving.ca"
+		}
+	],
+	"settings":{
+		"xdebug":{
+			"url":"http://local.voliving.ca/admin.php",
+			"port":9000,
+			"super_globals":true,
+			"close_on_stop":true
+		}
+	}
+}

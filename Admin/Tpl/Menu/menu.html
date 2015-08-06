@@ -1,0 +1,47 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+
+<div class="page_tit">[<a href="__URL__"> Back </a>] [ <a href="__URL__/menu/cid/{$cid}">{$mRs.name}</a> ]</div>
+<div class="list">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th><input type="checkbox" id="checkbox_handle" onclick="checkAll(this)" value="0"> ID</li>
+    <volist name='listFileds' id='listFileds'>
+    <th class="line_l">{$listFileds.name}</th>
+    </volist>
+    <th>Addtime</th>
+    <!--<th>State</th>-->
+    <th>Sort</th>
+    <th>Options</th>
+  </tr>
+  
+  <volist id="list" name="lists" key="k">
+      <tr overstyle='on' id="app{$list.id}">
+        <td class="mainTitle"><input type="checkbox" name="delID" id="delID" onclick="chkon(this)" value="{$list['id']}"> {$list['id']}</td>
+        <volist name='showDate' id='show'>
+        <td>
+        <php>
+            echo outDateList($show['formType'] , $list[$show['fieldName']]);
+        </php>
+        </td>
+        </volist>
+        <td>{$list.postdate|date="Y-m-d H:i:s",###}</td>
+        <!--<td title="Click to change the state"><span id="ischecked_{$list.id}"><a href="javascript:setActive({$list.id},'{$actModule}');"><eq name="list['ischecked']" value="1">Actived<else/>Locked</eq></a></span></td>-->
+        <td><input type="text" name="displayorder_{$list.id}" value="{$list.displayorder}" id="displayorder_{$list.id}" style="width:40px;" onblur="upSort({$list.id},'{$actModule}');" /></td>     
+        <td nowrap="nowrap"><a href="__URL__/menuInfo/id/{$list.id}">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delItem('{$list.id}','__URL__/doDeleteMenu');">Delete</a></eq>
+        </td>
+      </tr>
+  </volist>
+  </table>
+  </div>
+  <div class="Toolbar_inbox">
+    <a href="javascript:void(0);" class="btn_a" onclick="delItem('','__URL__/doDeleteMenu');"><span>Delect Selected</span></a>  <a href="__URL__/menuInfo/cid/{$mRs.id}" class="btn_a"><span>Add Item To [ {$mRs.name} ]</span></a>
+  </div>
+  </div>
+
+</div>
+
+</body>
+</html>

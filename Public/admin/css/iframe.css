@@ -1,0 +1,232 @@
+@charset "utf-8";
+.iframe-maincontent {
+	display: none;
+	background:#CCC;
+}
+/* 全局框架 */
+.iframe-html {
+}
+/* HTML内容 */
+.iframe-html-content {
+	display: none;
+	width: 400px;
+/*	padding:0 10px;*/
+}
+.iframe-body {
+/*	border-left:1px #CCC solid;
+	border-right:1px #CCC solid;*/
+}
+.iframe-body iframe{}
+/* 头部 */
+.iframe-header {
+	padding:3px 0 5px 0;
+	background:url(./../images/iframe/iframe_top_bg.gif) bottom left repeat-x;
+}
+#kwTitleLogo{float:left;}
+#kwTitleLogo a{display:block; width:25px; height:25px; margin:-3px 0 0 -10px; z-index:99999; position:absolute; background:url(./../images/iframe/iframe_logo.png) 0 -25px no-repeat;}
+#kwTitleLogo a:hover{background-position:0 0;}
+#kwTitle{height:20px; float:left; line-height:20px; margin:0; padding:0 0 0 35px; font-family:"微软雅黑","lucida grande", verdana, lucida, 宋体, sans-serif;}
+.iframe-header ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.iframe-header ul li {
+	display: inline;
+	padding-left: 1em;
+}
+.iframe-header ul li.iframe-previous, .iframe-header ul li.iframe-next {
+	display: none;
+}
+.iframe-header a {
+	font-weight: bold;
+	color: gray;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.iframe-header a:hover {
+	color: black;
+}
+.iframe-header .iframe-move a {
+	cursor: move;
+}
+.iframe-footer {
+	height: 16px;
+	background:url(./../images/iframe/iframe_footer_bg.gif) top left repeat-x #CCC;
+}
+.iframe-footer .iframe-resize {
+	display: block;
+	float: right;
+	margin-top: 5px;
+	height: 11px;
+	width: 11px;
+	background: url(./../images/iframe/iframe_resize.gif) no-repeat;
+}
+.iframe-footer .iframe-resize span {
+	display: none;
+}
+.iframe-resize {
+	cursor: nw-resize;
+}
+
+.iframe-container div {
+	font-family: Verdana, Helvetica;
+	font-size: 10pt;
+}
+.iframe-container table {
+	background: none;
+}
+/**
+.karwee {
+	outline: none;
+	text-decoration: none;
+}
+.karwee img {
+	border: 2px solid silver;
+}
+.karwee:hover img {
+	border-color: gray;
+}
+*/
+.iframe-active-anchor img {
+	visibility: hidden;
+}
+.iframe-gallery .iframe-active-anchor img {
+	border-color: black;
+	visibility: visible;
+	cursor: default;
+}
+.iframe-image {
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+	background: gray;
+}
+.iframe-wrapper, .iframe-outline {
+	background: white;
+}
+.glossy-dark {
+	background: #111;
+}
+
+.iframe-image-blur {
+}
+.iframe-number {
+	font-weight: bold;
+	color: gray;
+	font-size: .9em;
+}
+.iframe-caption {
+	display: none;
+	font-size: 1em;
+	padding: 5px;
+}
+.iframe-heading {
+	display: none;
+	font-weight: bold;
+	margin: 0.4em;
+}
+.iframe-dimming {
+	position: absolute;
+	background: black;
+}
+a.iframe-full-expand {
+   background: url(./../images/iframe/iframe_fullexpand.gif) no-repeat;
+   display: block;
+   margin: 0 10px 10px 0;
+   width: 34px;
+   height: 34px;
+}
+.iframe-loading {
+	display: block;
+	color: black;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 3px;
+	border: 1px solid white;
+	background-color: white;
+	padding-left: 22px;
+	background-image: url(./../images/iframe/loader.white.gif);
+	background-repeat: no-repeat;
+	background-position: 3px 1px;
+}
+a.iframe-credits,
+a.iframe-credits i {
+	padding: 2px;
+	color: silver;
+	text-decoration: none;
+	font-size: 10px;
+}
+a.iframe-credits:hover,
+a.iframe-credits:hover i {
+	color: white;
+	background-color: gray;
+}
+.iframe-move, .iframe-move * {
+	cursor: move;
+}
+
+
+.iframe-overlay {
+	display: none;
+}
+.hidden-container {
+	display: none;
+}
+.closebutton {
+	position: relative;
+	top: -15px;
+	left: 15px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: url(./../images/iframe/close.png);
+}
+
+.admin-style .iframe-header {
+	height: 25px;
+/*	border-bottom: 1px solid #dddddd;*/
+}
+.admin-style .iframe-heading {
+	position: absolute;
+	margin: 2px 0.4em;
+}
+
+.admin-style .iframe-header .iframe-move {
+	cursor: move;
+	display: block;
+	height: 16px;
+	position: absolute;
+	right: 24px;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+.admin-style .iframe-header .iframe-move * {
+	display: none;
+}
+.admin-style .iframe-header .iframe-close {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	z-index: 2;
+	padding: 0;
+}
+
+.admin-style .iframe-header .iframe-close a {
+	display: block;
+	background: url(./../images/iframe/iframe_close.png) 0 0 no-repeat;
+	height: 23px;
+	width: 105px;
+}
+.admin-style .iframe-header .iframe-close a:hover {
+	background-position: 0 -23px;
+}
+.admin-style .iframe-header .iframe-close span {
+	display: none;
+}
+.admin-style .iframe-maincontent {
+	padding-top: 1em;
+}

@@ -1,0 +1,61 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+<div class="page_tit">Web Menu<if condition="$_SESSION['admintype'] eq 10">  [ <a href="javascript:void(0);" class="btn_a" onclick="addSysMenu();"><span>Add Menu</span></a> ]</if></div>
+   
+  <div class="list">
+  <table>
+  <tr>
+  	<if condition="$_SESSION['admintype'] eq 10">
+    <th style="width:30px;">
+        <input type="checkbox" id="checkbox_handle" onclick="checkAll(this)" value="0">
+        <label for="checkbox"></label>
+    </th>
+    </if>
+    <th class="line_l">Menu Name</th>
+    <if condition="$_SESSION['admintype'] eq 10"><th class="line_l">Link</th></if>
+    <th class="line_l">Sort</th>
+    <th class="line_l">Status</th>
+    <th class="line_l">Option</th>
+  </tr>
+  <volist id="vo" name="MenuList">
+      <tr overstyle='on' id="app{$vo.id}">
+      	<if condition="$_SESSION['admintype'] eq 10">
+        <td><input type="checkbox" name="checkbox" id="checkbox2" onclick="checkon(this)" value="{$vo['id']}"></td>
+        </if>
+        <td class="mainTitle">{$vo.name}</td>
+        <if condition="$_SESSION['admintype'] eq 10"><td class="mainTitle">{$vo.url}</td></if>
+        <td class="mainTitle">{$vo.sort}</td>
+        <td class="mainTitle"><eq name="vo['ischecked']" value="1">Display<else/><span class="need">Hide</span></eq></td>
+        <td><a href="javascript:void(0);" onclick="addSysMenu({$vo.id});">Edit</a>
+        <if condition="$_SESSION['admintype'] eq 10">
+        &nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delMenu('{$vo.id}');">Delete</a>
+        </if>
+        </td>
+      </tr>
+      
+  </volist>
+  </table>
+
+  </div>
+ <div class="Toolbar_inbox">
+ 	<if condition="$_SESSION['admintype'] eq 10">
+    <a href="javascript:void(0);" class="btn_a" onclick="delItem('','__URL__/doDeleteMenu');"><span>Delete Menu</span></a>
+    <a href="javascript:void(0);" class="btn_a" onclick="addSysMenu();"><span>Add Menu</span></a>
+    </if>
+  </div>
+</div>
+
+<script>	
+//添加修改系统菜单
+function addSysMenu(gid)
+{
+	var title = gid?'Edit Menu':'Add Menu';
+	gid = gid? gid:'';
+	ui.box.load( "__URL__/add_menu/gid/"+ gid,{title:title});
+}  
+</script>
+</div>
+</body>
+</html>

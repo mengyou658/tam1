@@ -1,0 +1,61 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="form2">
+<form method="post" name="sendform" id="sendform" enctype="multipart/form-data">
+	<h3>如有技术上的疑问，可直接Email至慧创网络技术部</h3>
+	 <dl class="lineD">
+    <dt><span>*</span> 您的姓名：</dt>
+    <dd><input class="ipt" name="name" type="text" id="name" value=""/></dd>
+   </dl>
+    <dl class="lineD">
+    <dt><span>*</span> 您的邮箱：</dt>
+    <dd><input class="ipt" name="email" type="text" id="email" value=""/></dd>
+   </dl>
+    <dl class="lineD">
+    <dt><span>*</span> 网站网址：</dt>
+    <dd><input class="ipt" name="siteurl" type="text" id="siteurl" value="http://<php>echo $_SERVER['HTTP_HOST'];</php>"/></dd>
+   </dl>
+    </dd>
+   </dl>
+    <dl class="lineD">
+    <dt><span>*</span> 问题内容：</dt>
+    <dd><textarea name="content" id="content" class="txtarea"></textarea></dd>
+   </dl>
+    <div class="page_btm">
+      <input  type="submit" class="btn_b" id="btnSubmit" value=" Send ">
+      </div>
+ </form> 
+ </div>
+</div> 
+<script language="javascript">
+
+$(document).ready(function(){
+var options = {
+			    	type: 'post',
+			    	url: '__URL__/sendEmail',
+				    dataType: 'json',
+					beforeSubmit: validate,
+				    success: showResponse
+			 };
+			$('#sendform').submit(function() {
+			    $(this).ajaxSubmit(options);
+			    return false;
+			}); 
+	}); 
+function validate(){
+	document.getElementById("btnsubmit").disabled=true;
+	}		
+function showResponse(txt){
+		if(txt.status=='0') {
+			ui.error("请填写必填项");
+		}else if(txt.status=='1'){
+		    ui.success('邮件发送成功，我们将尽快给您回复');
+			$('#sendform')[0].reset();
+		}
+		document.getElementById("btnsubmit").disabled=false;
+}
+
+</script>
+</body>
+</html>

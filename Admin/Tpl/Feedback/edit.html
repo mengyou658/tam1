@@ -1,0 +1,62 @@
+<include file="Public:_header"/>
+<script>
+function getInfo(obj)
+{
+	location.href="__URL__/edit/cid/"+obj.value;
+}
+
+</script>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+<div class="list">
+<form id="formList" name="formList" action="__URL__/doInfo"  method="post" enctype="multipart/form-data" onsubmit="return CheckForm(this);">  
+<!--<div class="RootName">分类信息</div>
+        <div class="line1px"></div> 
+<table> 
+    <tr>
+        <td align="right" width="20%"><span class="need">*</span> 所属分类：</td>
+        <td align="left">
+            <select name="cid" id="cid" onchange="getInfo(this);">
+                <option value="">请选择类别</option>
+                {$cateStr}
+            </select>
+        </td>
+    </tr>
+</table>-->
+<!--<neq name="cid" value="">-->
+    <volist name="groupRs" id="groupRs">
+        <div class="RootName"><a href="javascript:;" onclick="history.go(-1);">Back</a></div>
+        <div class="line1px"></div>
+        <table width="100%"  border="0">
+           <tr>
+            <volist name="groupRs.DRs" id="DRs" key="k">
+                <td width="{$lines.0}" align="right">{$DRs.nameStr}</td>
+                <td width="{$lines.1}" align="left">{$DRs.FieldNameStr}</td>
+                <if condition="$k % $mTpl['perLine'] eq 0"></tr><tr></if>
+            </volist> 
+            </tr>
+         </table> 
+     </volist>  
+     <neq name="vo.attachment" value="">
+     <table width="100%"  border="0">
+     <tr>
+     	<td width="20%" align="right">File Upload:</td>
+        <td width="80%" align="left"><a href="/admin.php/Public/download?fid={$vo.attachment}" target="_blank">Download File</a></td>
+     </tr>
+     </table>
+     </neq>
+    <div class="submit_s">
+        <!--<input type="hidden" name="id" id="id" value="{$vo.id}" />
+        <input type="submit" class="btn_b" name="submit_btn" value="确定" />
+        <input type="reset" name="reset_btn" class="btn_w" value="重置" />-->
+    </div>
+<!--   <else/>
+    <div class="msg">
+     	请先选择分类....
+     </div> 
+</neq>-->
+</form>
+  
+    </div>
+ </div> 

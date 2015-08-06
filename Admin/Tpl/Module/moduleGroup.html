@@ -1,0 +1,43 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="form">
+
+<div class="list">
+	<div class="Toolbar_inbox">分组列表</div>
+	<div class="spaceLine"></div>
+      <table width="100%" >
+        <tr overstyle='on' bgcolor="#E7E7E7">
+          <td width="8%">所属模版</td>
+          <td width="50%">分组名称</td>
+          <td width="10%">排序</td>
+          <td width="8%">删除</td>
+          </tr>
+		 <volist name="lists" id="list">
+        <tr  overstyle='on'>
+          <td>{$moduleName}</td>
+          <td>{$list.name}</td>
+          <td>{$list.sort}</td>
+          <td><a href="__URL__/GroupDel/id/{$list.id}"><img src="__PUBLIC__/admin/images/no.gif"></a></td>
+          </tr>
+		  </volist>
+      </table>
+    <div class="spaceLine"></div>
+	<div class="Toolbar_inbox">新增分组</div>
+	<div class="spaceLine"></div>
+	
+	<form name="form2" method="post" action="__URL__/GroupAE" onSubmit="return CheckForm(this)">
+	  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">分组名称：
+            <input name="name" id="name" type="text" size="30" check="^\S+" warning="请填写分组名称">
+            排序：
+            <input name="sort" id="sort" type="text" value="1" size="10">
+            <input type="text" name="module" id="module" value="{$module}" />
+            <input type="submit" class="btn_b" name="Submit" value=" 提 交 "></td>
+        </tr>
+      </table>
+    </form>
+    </div>
+    </div>
+ </div>

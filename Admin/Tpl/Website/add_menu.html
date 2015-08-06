@@ -1,0 +1,66 @@
+<div id="createFollowGroup2"  class="list">
+<form id="menu_form" action="" method="post">
+	<table>
+        <tr>
+	<td align="right"> <if condition="$gid">Edit Menu：<else />Add Menu：</if></td>
+    <td align="left"><input type="text" name="name" value="{$vo.name}" id="name" class="text"/></td>
+    </tr>
+    <if condition="$_SESSION['admintype'] eq 10">
+    <tr>
+	<td align="right"> Link：</td>
+    <td align="left"><input type="text" name="url" value="{$vo.url}" id="url" class="s_txt"/></td></tr>
+    </if>
+    <tr>
+	<td align="right"> Sort：</td>
+    <td align="left"><input type="text" name="sort" value="{$vo.sort}" id="sort" class="s_txt"/></td></tr>
+    <tr>
+	<td align="right"> Status：</td>
+    <td align="left"><input name="ischecked" type="radio" id="radio" value="1" <eq name="vo['ischecked']" value="1">checked="checked"</eq> class="checkbox" />
+Display
+<input type="radio" name="ischecked" id="radio2" value="0"  <eq name="vo['ischecked']" value="0">checked="checked"</eq> class="checkbox"/>
+Hide</td></tr>
+	<tr><td colspan="2" align="center"><input type="hidden" name="id" id="id" value="{$vo.id}" /><input type="submit"  class="btn_b" value="Submit" />
+	<input type="button" onclick="ui.box.close()" class="btn_w" value="Cancel" /></td></tr>
+    </table>
+    </form>
+</div>
+<script>
+$(document).ready(function(){
+	var options = {
+		type: 'post',
+		url: '__URL__/doSysMenu',
+		dataType: 'json',
+		success: showResponse
+	};
+	$('#menu_form').submit(function() {
+		$(this).ajaxSubmit(options);
+		return false;
+	}); 
+}); 
+		
+function showResponse(txt)
+{
+	if(txt.status=='0')
+	{
+		ui.error("Menu Name Must");
+	}
+	else if(txt.status=='1')
+	{
+		ui.error("链接必须");
+	}
+	else if(txt.status=='2')
+	{
+		ui.error("Edit Fail");
+	}
+	else if(txt.status=='3')
+	{
+		ui.error("Update Fail");
+	} 
+	else
+	{
+		ui.success('Success');
+		//ui.box.close();
+		window.location.href=window.location.href;
+	}
+}
+</script>

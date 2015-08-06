@@ -1,0 +1,27 @@
+<include file="Public:top" />
+<include file="Public:aboutleft" />
+                    	<h2><a href="#">加盟专区</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="index.html">关于凯莉娅</a></li>
+                            <li><a href="#">加盟专区</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                    	<h2 class="jiameng">法国凯莉娅集团简介加盟条件</h2>
+                        <table cellpadding="6" class="jituan_table">
+                            <tr>
+                                <td valign="top" align="left">
+                                    <php>echo stripslashes($sys['Carrer']);</php>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <include file="Public:end" />

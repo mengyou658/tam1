@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	background:url(../images/desktop/logo.png) right;
+	background-color:#FFFFFF;
+	background-repeat:no-repeat;
+	color:#333333;
+	overflow:hidden
+}
+img {
+	border:0;
+	behavior:url(./../tools/iepngfix/iepngfix.htc);
+}
+td, tr, td:hover, tr.hover {
+	background:none;
+}
+td {
+	background-color:none;
+}
+#Desktop {
+}
+#Desktop table {
+	padding:10px 0 0 10px;
+}
+#Desktop table td {
+	vertical-align:top;
+}
+#Desktop table .icon {
+	width:90px;
+	height:90px;
+	text-align:center;
+}
+#Desktop table .icon .text {
+	padding:3px 0 0 0;
+}
+#Desktop table .icon .img a {
+	display:block;
+	padding:5px;
+	margin:0 auto;
+}
+#Desktop table .icon .img a:hover {
+	background:url(../images/desktop/index_icon_abg.png) center center no-repeat;
+	behavior:url(../tools/iepngfix/iepngfix.htc);
+}
+#StartList {
+	position:absolute;
+	z-index:2001;
+	display:none;
+	bottom:32px;
+	width:220px;
+	height:530px;
+}
+#StartList #starttoplogo {
+	background:url(../images/desktop/starttoplogo.png);
+	height:30px;
+	behavior:url(../tools/iepngfix/iepngfix.htc);
+}
+#StartList #starttoplogo a {
+	display:block;
+	height:25px;
+}
+#StartList #Menu {
+	width:210px;
+	padding:5px 0 10px 9px;
+	height:485px;
+	overflow:auto;
+	overflow-x:hidden;
+	overflow:auto;
+	scrollbar-face-color: #DBEBFE; 
+	scrollbar-shadow-color: #B8D6FA; 
+	scrollbar-highlight-color: #FFFFFF; 
+	scrollbar-3dlight-color: #DBEBFE; 
+	scrollbar-darkshadow-color:#458CE4; 
+	scrollbar-track-color: #FFFFFF; 
+	scrollbar-arrow-color: #458CE4;
+	background:url(../images/desktop/index_startlist_bg.png) repeat-y 0 0;
+	border-right:1px #000 solid;
+} /* w:219;h:500 */
+#StartList #Menu div {
+	clear:both;
+}
+#StartList #Menu #List {
+}
+#StartList #Menu #List ol {
+	float:left;
+}
+#StartList #Menu #List dt {
+	clear:both;
+	cursor:pointer;
+}
+#StartList #Menu #List dt .pics {
+	padding:5px 10px 5px 0;
+}
+#StartList #Menu #List dt .pics img {
+	width:25px;
+	height:25px;
+}
+#StartList #Menu #List dt .text {
+	padding:6px 0 0 0;
+	font-size:13px;
+	color:#000000;
+}
+#StartList #Menu #List dt .more {
+}
+#StartList #Menu #List dd {
+	clear:both;
+	float:left;
+	width:100%;
+}
+#StartList #Menu #List dd ul {
+	clear:both;
+}
+#StartList #Menu #List dd ul li {
+	float:left;
+}
+#StartList #Menu #List dd ul .pics {
+	padding:2px 2px 2px 30px;
+	float:left;
+}
+#StartList #Menu #List dd ul .pics img {
+	width:20px;
+	height:20px;
+}
+#StartList #Menu #List dd ul .text {
+	padding:3px 0 0 0;
+}
+#StartList #Menu #List dd ul .text a {
+	font-size:13px;
+	color:#000000;
+	display:block;
+	padding:1px 5px;
+}
+#StartList #Menu #List dd ul .text a:hover {
+	text-decoration:none;
+	background:#036;
+	color:#FFF;
+}
+#StartList #Menu #List dd ul .more {
+	float:right;
+	padding:3px 10px 0 0;
+*padding:0 25px 0 0;
+}
+#StartList #Menu #about {
+	margin:0 5px 0 0;
+	padding:5px;
+*padding:2px;
+	border:3px #BECBD9 outset;
+}
+#StartList #Menu #about a {
+	color:#333;
+}
+#StatusBar {
+	position:absolute;
+	bottom:0;
+	z-index:2001;
+	width:100%;
+	height:40px;
+	background:url(../images/desktop/index_statusbar_bg.png) left bottom repeat-x;
+} /* 状态栏 */
+#StatusBar ol {
+	float:left;
+}
+#StatusBar #StartButton {
+	padding:0 0 0 30px;
+} /* 开始按钮 */
+#StatusBar #StartButton a {
+	display:block;
+	background:url(../images/desktop/startbutton.png) center bottom no-repeat;
+	width:40px;
+	height:40px;
+	behavior:url(../tools/iepngfix/iepngfix.htc);
+}
+#StatusBar #StartButton a:hover {
+	background-position:top;
+	cursor:pointer;
+}
+#StatusBar #Fast {
+	padding:15px 0 0 5px;
+}
+#StatusBar #Fast img {
+	width:20px;
+	height:20px;
+}
+#StatusBar #Fast a {
+	display:block;
+	width:22px;
+	float:left;
+	margin:0 1px;
+}
+#StatusBar #Fast a:hover {
+	background:#666;
+}
+#StatusBar #Fast > span{ float:left; margin-left:20px; font-size:14px}
+#StatusBar #Fast #lang { margin-left:5px; width:auto;}
+#StatusBar #Fast #lang.hover{ color:#F00; font-weight:bold;}
+#StatusBar #Fast #lang:hover { background:#FFF;color:#F00; font-weight:bold; text-decoration:none}
+#StatusBar #Fast #lang > img { vertical-align:middle; margin-right:3px;}
+#StatusBar #sCenter {
+	padding:16px 0 0 50px;
+	color:#333;
+}
+#StatusBar #oRight {
+	float:right;
+	margin:10px 10px 0 0;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	text-align:right;
+}
+#StatusBar #oRight span {
+	margin:10px 10px 0 0;
+	color:#B31D02;
+    
+}
+#StatusBar #oRight a {
+	color:#333;
+	font-size:12px;
+}

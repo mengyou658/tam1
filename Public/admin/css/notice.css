@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+
+* { margin: 0px; padding: 0px; }
+
+body { margin:0 auto;-webkit-text-size-adjust:none; font-family:"微软雅黑";   font-size:12px;text-align:left; color:#333; background:#fff; }
+
+ul, li { list-style: none; }
+
+
+/*信息提示页*/
+table.message{margin:20 auto 0px auto; padding:3px; border-collapse:collapse; border:1px solid gray; text-align:center; width:55%}
+div.message{width:75%; padding:5pt; float:none; margin:15% auto 0% auto; clear:both; text-align:center}
+div.errorMessage{line-height:150%; padding:5px; margin:3pt; font-weight:bold; font-size:15px; font-family:Tahoma,Verdana; border:1pt dashed gray; color:#F30; background:#CFC}
+table.message th, 
+table.message td, 
+table.error th, 
+table.error td{border-left:1px solid silver; border-bottom:1px solid silver; vertical-align:top; padding:3px}
+table tr.row{background-color:#FFF}
+table td.topTd{background:url(../Images/bgline.gif) repeat-x; border-bottom:1pt solid gray}
+table td.bottomTd{background:url(../Images/bgline.gif) repeat-x; border-bottom:1pt solid gray}
+.tCenter{text-align:center; font-size:14px; font-weight:bold;}
+.space{letter-spacing:4px}
+

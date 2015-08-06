@@ -1,0 +1,39 @@
+<include file="Public:_header" />
+<div class="so_main">
+	<include file="Public:menu_nav" />
+    
+	<div class="page_tit">
+		[ <a href="__URL__/menu/cid/{$mRs.id}"><span>{$mRs.name}</span></a> ]  [
+		<span>Add</span> ]
+	</div>
+
+	<form id="menu_form" name="menu_form" action="__URL__/edit_menu"
+		method="post" enctype="multipart/form-data">
+		<div class="list">
+			<volist name="groupRs" id="groupRs" key="gkey">
+			<div class="RootName" onclick="fold('{$gkey}');" title="">{$groupRs.name}</div>
+			<div class="line1px"></div>
+			<table id="app_{$gkey}">
+				<tr overstyle="on">
+					<volist name="groupRs.DRs" id="DRs" key="k">
+					<td width="{$lines.0}" align="right">{$DRs.nameStr}</td>
+					<td width="{$lines.1}" align="left">{$DRs.FieldNameStr}</td>
+					<if condition="$k % $mTpl['perLine'] eq 0">
+                        </tr>
+                        <tr overstyle="on">
+					</if>
+					</volist>
+				</tr>
+				<tr overstyle='on'>
+					<td></td>
+					<td><input type="hidden" name="cid" id="cid" value="{$cid}" />
+						<input type="hidden" name="id" id="id" value="{$vo.id}" />
+                        <input class="btn_b" type="submit" name="Submit2" value="Submit">
+                        <input class="btn_b" name="Cancel" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cancel " onclick="history.go(-1)">
+					</td>
+				</tr>
+			</table>
+			</volist>
+		</div>
+	</form>
+</div>

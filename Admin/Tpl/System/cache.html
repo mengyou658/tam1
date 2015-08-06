@@ -1,0 +1,33 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+  <form method="post" action="__URL__/clearcache">
+   <div class="list">
+  <table>
+  <tr>
+    <th style="width:120px;">
+        <input type="checkbox" id="checkbox_handle" onclick="checkAll(this)" value="0">
+        (Select All)
+    </th>
+  </tr>
+<volist id="sub" name="cache">
+        <tr>
+          <td><strong>{$key}</strong></td>
+          </tr>
+        <tr overstyle='on'>
+          <td>
+            <volist id="dir" name="sub">
+            <input type="checkbox" name="id[]" value="{$dir}" class="checkbox"> {$key}<br>
+            </volist>
+		</td>
+        </tr> 
+</volist>
+  </table>
+  </div>
+    <div class="page_btm">
+      <input type="submit" class="btn_b" value="Submit" />
+    </div>
+    </form>
+ </div>
+</body>
+</html>

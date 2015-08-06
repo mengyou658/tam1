@@ -1,0 +1,24 @@
+<include file="Public:top" />
+
+<include file="Public:aboutleft" />
+                    	<h2><a href="#">形象大片</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="#">形象大片</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                    	<ul class="xingxiang">
+                            <volist name="catePics" id="vo" key="k">
+                                <li><a href="#"><img src="{$vo.attachment}"/></a></li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <include file="Public:end" />

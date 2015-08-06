@@ -1,0 +1,68 @@
+<include file="Public:_header"/>
+<script>
+function fold(index) {
+  	$('#app_'+index).slideToggle('fast');
+}
+</script>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<form method="post" name="form1" action="__URL__/doAdmin"  enctype="multipart/form-data">
+<div class="list">
+	<h3 onclick="fold('1');" title="点击标题可以折叠栏目">基本资料</h3>
+    <div id="app_1">
+    <table>
+      <tr> 
+            <td width="80" align="right">用 户 名：</td>
+            <td align="left"><neq name='list.id' value=''>{$list.username}<else/><input name="username" type="text" id="username" class="txt"/></neq></td>
+           </tr>
+        <tr>
+            <td align="right">密　　码：</td>
+            <td align="left"><input name="password" type="password" id="password" class="txt"/> （不更改请留空）
+            <input name="opassword" type="hidden" id="opassword" value="{$list.password}" /></td>
+        </tr>
+        <tr>
+            <td align="right">状　　态：</td>
+            <td align="left"><input type="radio" name="ischecked" value="1" <if condition="$list['ischecked'] eq 1 ">checked="checked"</if> class="checkbox"/>
+                                正常 
+                             <input name="ischecked" type="radio" value="0" <if condition="$list['ischecked'] eq 0 ">checked="checked"</if> class="checkbox"/>
+                                锁定</td>
+           </tr>
+          <tr>
+            <td align="right">昵　　称：</td>
+            <td align="left"><input name="nickname" type="text" id="nickname" value="{$list.nickname}" class="txt"/></td>
+           </tr>
+      </table>
+     </div>
+<h3 onclick="fold('2');" title="点击标题可以折叠栏目">管理员权限</h3>
+<div id="app_2">
+	<volist name="tMenu" id="vos">
+              <table>
+                <tr> 
+                  <td><font color="#990000"><strong> <input name="AdminStr[]" type="checkbox" id="AdminStr[]" value="{$vos.id}" <if condition="$vos['IsSelect'] eq 'Y' ">checked=checked</if> class="checkbox"> 
+                    {$vos.name}</strong></font></td>
+                </tr>
+                <tr> 
+                  <td> 
+                      <volist name="vos.DRs" id="DRs" key="k">
+                        <input name="AdminStr[]" type="checkbox" id="AdminStr[]" value="{$DRs.id}" <if condition="$DRs['IsSelect'] eq 'Y' ">checked=checked</if> class="checkbox">{$DRs.name}&nbsp;&nbsp;&nbsp;
+                        </volist>
+						 </td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+              </volist>
+    </div>
+       <div class="page_btm">
+       <input type="hidden" name="id" id="id" value="{$list.id}" />
+	 <input type="submit" class="btn_b" id="btnSubmit" value=" 确定 ">
+	 <input type="reset" class="btn_b" id="btnSubmit3" value=" 还原 " />
+     		</div>
+    	 </div>
+ </form> 
+</div> 
+</body>
+</html>

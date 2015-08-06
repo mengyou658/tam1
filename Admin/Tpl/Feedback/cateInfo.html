@@ -1,0 +1,80 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="page_tit">[ <a href="__URL__/cate">{$MenuTitle}分类管理</a> ]  [ <a href="__URL__/cateInfo"><span>添加类别</span></a> ] <if condition="$parentRs['id'] gt 0"> [ <a href="__URL__/cateInfo/parentid/{$parentRs['id']}"><span>添加<font color="#BD0000">"{$parentRs.name}"</font>子类别</span></a> ]</if></div>
+
+<div class="list">
+	<form id="cate_form" method="post" name="cate_form"
+		action="__URL__/eidt_cate" enctype="multipart/form-data">
+		<table width="100%" cellpadding="5" cellspacing="1">
+			<tr>
+				<td width="10%" align="right"><span class="need">*</span> 类别名称：</td>
+				<td><input type="text" name="name" value="{$vo.name}" id="name"
+					class="txt" /></td>
+			</tr>
+            <!--<tr>
+				<td width="10%" align="right">副名称：</td>
+				<td><input type="text" name="subname" value="{$vo.subname}" id="subname"
+					class="txt" /></td>
+			</tr>-->
+			<tr>
+				<td align="right">排序：</td>
+				<td><input type="text" name="displayorder"
+					value="{$vo.displayorder}" id="displayorder" /></td>
+			</tr>
+			
+			<tr>
+				<td align="right">状态：</td>
+				<td><input name="ischecked" type="radio" id="radio" value="1"
+				<if condition="$vo['ischecked'] eq 1 or $vo['ischecked'] eq ''">checked="checked"</if>
+					class="checkbox"/> 正常 <input type="radio" name="ischecked"
+					id="radio2" value="0"
+				<eq name="vo['ischecked']" value="0">checked="checked"</eq>
+					class="checkbox"/> 锁定</td>
+			</tr>
+			<tr>
+				<td align="right">图片：</td>
+				<td><input name="attachment" type="file" id="attachment" /></td>
+			</tr>
+			<tr id="reviewImg" style="display: none">
+				<td align="right">图片预览：</td>
+				<td colspan="3"><img id="viewImg" border="0" /></td>
+			</tr>
+			<if condition="$vo['attachment'] neq ''">
+			<tr id="ImgAttach">
+				<td align="right">己上传图片：</td>
+				<td colspan="3"><span id="attachment_Html"><input
+						type="hidden" name="old_attachment" value="$vo['attachment']" /><a
+						href="{$vo['attachment']}" class="lightbox"><img
+							src="{$vo['attachment']}" class="sImg"></a>&nbsp;&nbsp;<input
+						type="button" class="btn_b" name="dels" value=" 删除图片 "
+						onclick="MoveHtml('attachment_Html');"></span></td>
+			</tr>
+			</if>
+            <tr>
+				<td align="right">使用模板：</td>
+				<td><select name="mid" id="mid">
+						<volist name="moduleList" id="moduleList">
+						<option value="{$moduleList.id}"
+							<eq name="moduleList.id" value="$mid">selected</eq>
+							>{$moduleList.name}
+						</option>
+						</volist>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">内容：</td>
+				<td>{$editor}</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="hidden" name="tb"
+					id="tb" value="{$tb}" /><input type="hidden" name="cid" id="cid"
+					value="{$cid}" /><input type="hidden" name="id" id="id"
+					value="{$vo.id}" /><input type="submit" class="btn_b" value="确 定" />
+					<input type="button" onclick="ui.box.close()" class="btn_w"
+					value="关 闭" /></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</div>

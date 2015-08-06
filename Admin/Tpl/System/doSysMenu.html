@@ -1,0 +1,10 @@
+ <tr overstyle='on' id="{$DRs.id}">
+        <td><input type="checkbox" name="checkbox" id="checkbox2" onclick="checkon(this)" value="{$DRs['id']}"></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;|--{$DRs.name}</td>
+        <td>{$vo.url}/{$DRs.url}</td>
+        <td>{$DRs.sort}</td>
+        <td><eq name="DRs['ischecked']" value="1">正常<else/>锁定</eq></td>
+        <td>
+            <a href="javascript:void(0);" onclick="addSysMenu({$DRs.id});">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delMenu('{$DRs.id}');">删除</a>
+        </td>
+      </tr>

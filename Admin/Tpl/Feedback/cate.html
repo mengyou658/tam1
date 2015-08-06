@@ -1,0 +1,55 @@
+<include file="Public:_header" />
+<div class="so_main">
+	<include file="Public:menu_nav" />
+<div class="page_tit">[ <a href="__URL__/cate">类别管理</a> ]  [ <a href="__URL__/cateInfo"><span>添加顶级类别</span></a> ]<if condition="$parentRs['id'] gt 0">  [ <a href="__URL__/cateInfo/parentid/{$parentRs['id']}"><span>新增<font class="need">"{$parentRs.name}"</font>子类别</span></a> ] [ <a href="__URL__/cate/parentid/{$parentRs.cid}">返回上级 <img
+						src="__PUBLIC__/admin/images/icon_up.gif" width="21" height="20"
+						style="vertical-align: middle" /></a> ]</if></div>	
+	<div class="list">
+		<table>
+			<tr overstyle='on'>
+				<th><input type="checkbox" id="checkbox_handle"
+					onclick="checkAll(this)" value="0"> ID</th>
+				<th>类别名称</th>
+				<th>添加时间</th>
+                <th>状态</th>
+				<th>排序</th>
+				<th>操作</th>
+			</tr>
+			<volist id="list" name="lists">
+			<tr overstyle='on' id="app{$list.id}">
+				<td><input type="checkbox" name="delID" id="delID"
+					onclick="chkon(this)" value="{$list['id']}"> {$list['id']}</td>
+				<td><a href="__URL__/cate/parentid/{$list.id}" title="查看子类别"><img
+						src="__PUBLIC__/admin/images/icon_down.gif" width="21" height="20"
+						style="vertical-align: middle" />&nbsp;{$list.name}</a> (<span
+					class="need">{$list.nums}</span>)</td>
+				<td>{$list.postdate|date="Y-m-d H:i:s",###}</td>
+                <td title="点击可直接更改状态"><span id="ischecked_{$list.id}"><a href="javascript:setActive({$list.id},'Category');"><eq name="list['ischecked']" value="1">正常<else/>锁定</eq></a></span></td>
+				<td><input type="text" name="displayorder_{$list.id}"
+					value="{$list.displayorder}" id="displayorder_{$list.id}"
+					style="width: 40px;" onblur="upCateSort({$list.id});" />
+				</td>
+				<td>
+                	<a
+					href="__URL__/edit/cid/{$list.id}">添加内容</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                	<a
+					href="__URL__/cateInfo/gid/{$list.id}">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+					href="javascript:void(0);"
+					onclick="delItem('{$list.id}','__URL__/doDeleteCate');">删除</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                    href="__URL__/cateInfo/parentid/{$list.id}">新增子类别</a>
+                    </td>
+			</tr>
+			</volist>
+		</table>
+
+	</div>
+       
+    <div class="Toolbar_inbox">
+        <a href="javascript:void(0);" class="btn_a" onclick="delItem('','__URL__/doDeleteCate');"><span>删除所选</span></a> 
+        <a href="__URL__/cateInfo" class="btn_a"><span>添加顶级类别</span></a>
+    </div>
+        
+</div>
+</div>
+</body>
+</html>

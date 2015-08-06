@@ -1,0 +1,119 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<div class="list">
+<div class="RootName"><eq name="Rs['id']" value="">新增字段<else/>修改字段</eq></div>
+	<div class="line1px"></div>
+<form id="formlist" name="formlist"  method="post" action="__URL__/doField" onsubmit="return CheckForm(this);">
+	<table width="100%">
+    <tr overstyle='on'>
+      <td width="20%" align="right"><font color="#FF0000">* </font>所属分组：</td>
+      <td><select name="groupID" id="groupID" check="^\S+" warning="请选择分组">
+		<volist name="GroupRs" id="Group">
+        <option value="{$Group.id}" <eq name="Rs['groupID']" value="$Group['id']">selected</eq>>{$Group.name}</option>
+		</volist>
+      </select></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>字段标题：</td>
+      <td><input name="name" type="text" id="name" value="{$Rs.name}" size="40" maxlength="20" check="^\S+" warning="请填写字段标题"></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>字段名称：</td>
+      <td><input name="fieldName" type="text" id="fieldName" value="{$Rs.fieldName}" size="40" maxlength="20" check="[A-Za-z]+" warning="请填写字段名称，且只能是英文字母">
+      只能用英文字母</td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>字段类型：</td>
+      <td><select name="fieldType" id="fieldType">
+        <option value="VARCHAR" <eq name="Rs['fieldType']" value="VARCHAR">selected</eq>>字符类型</option>
+        <option value="INT" <eq name="Rs['fieldType']" value="INT">selected</eq>>数字类型(整型)</option>
+        <option value="FLOAT" <eq name="Rs['fieldType']" value="FLOAT">selected</eq>>数字类型(浮点型)</option>
+        <option value="TEXT" <eq name="Rs['fieldType']" value="TEXT">selected</eq>>文本类型</option>
+        <option value="DATE" <eq name="Rs['fieldType']" value="DATE">selected</eq>>日期类型(年月日)</option>
+      </select></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>表单类型：</td>
+      <td><select name="formType" id="formType">
+        <option value="text" <eq name="Rs['formType']" value="text">selected</eq>>文本</option>
+        <option value="textarea" <eq name="Rs['formType']" value="textarea">selected</eq>>文本框</option>
+        <option value="editor" <eq name="Rs['formType']" value="editor">selected</eq>>编辑器</option>
+        <option value="select" <eq name="Rs['formType']" value="select">selected</eq>>下拉选项</option>
+        <option value="checkbox" <eq name="Rs['formType']" value="checkbox">selected</eq>>多项选择</option>
+        <option value="radio" <eq name="Rs['formType']" value="radio">selected</eq>>单项选择</option>
+        <option value="password" <eq name="Rs['formType']" value="password">selected</eq>>密码</option>
+      	<option value="file" <eq name="Rs['formType']" value="file">selected</eq>>图片</option>
+        <option value="filedir" <eq name="Rs['formType']" value="filedir">selected</eq>>图集</option>
+        <option value="upfile" <eq name="Rs['formType']" value="upfile">selected</eq>>大文件上传</option>
+        <option value="date" <eq name="Rs['formType']" value="date">selected</eq>>时间</option>
+        <option value="city" <eq name="Rs['formType']" value="city">selected</eq>>省市县</option>
+
+      </select></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right">默 认 值：</td>
+      <td><input name="fieldValue" type="text" id="fieldValue" value="{$Rs.fieldValue}" size="40"></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right" valign="top">多项选择值：</td>
+      <td><textarea name="fieldSelect" cols="40" id="fieldSelect">{$Rs.fieldSelect}</textarea></td>
+    </tr>
+    <!--<tr overstyle='on'>
+      <td align="right">字段长度：</td>
+      <td><input name="len" type="text" id="len" value="{$Rs.len}" size="40" maxlength="3"></td>
+    </tr>-->
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>是否必填：</td>
+      <td><input type="radio" name="iswrite" value="1" <eq name="Rs['iswrite']" value="1">checked</eq>>
+        是
+          <input name="iswrite" type="radio" value="0" <if condition="$Rs['iswrite'] eq '' or $Rs['iswrite'] eq '0'">checked</if>>
+        否</td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>列表展示：</td>
+      <td><input type="radio" name="islist" value="1" <eq name="Rs['islist']" value="1">checked</eq>>
+        是
+          <input name="islist" type="radio" value="0" <if condition="$Rs['islist'] eq '' or $Rs['islist'] eq '0'">checked</if>>
+        否</td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>表格导出：</td>
+      <td><input type="radio" name="isout" value="1" <eq name="Rs['isout']" value="1">checked</eq>>
+        是
+          <input name="isout" type="radio" value="0" <if condition="$Rs['isout'] eq '' or $Rs['isout'] eq '0'">checked</if>>
+        否</td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right"><font color="#FF0000">* </font>搜索字段：</td>
+      <td><input type="radio" name="issearch" value="1" <eq name="Rs['issearch']" value="1">checked</eq>>
+        是
+          <input name="issearch" type="radio" value="0" <if condition="$Rs['issearch'] eq '' or $Rs['issearch'] eq '0'">checked</if>>
+        否</td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right">排列顺序：</td>
+      <td><input name="sort" type="text" id="sort" value="{$Rs.sort}" size="40" maxlength="2"></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right" valign="top">文字提示：</td>
+      <td><textarea name="topic" cols="40" id="topic">{$Rs.topic}</textarea></td>
+    </tr>
+    <tr overstyle='on'>
+      <td align="right" valign="top">错误提示：</td>
+      <td><textarea name="erro" cols="40" id="erro">{$Rs.erro}</textarea></td>
+    </tr>
+    <tr overstyle='on'>
+    	<td></td>
+    	<td>
+        <input name="len" type="hidden" id="len" value="255" size="40">
+            <input name="id" type="hidden" id="id" value="{$Rs.id}">
+            <input name="mid" type="hidden" id="mid" value="{$mid}">
+            <input type="submit" name="Submit2" value=" 提 交 ">
+            <input type="button" name="Submit22" value=" 返 回 " onClick="history.back();">
+    </td>
+    </tr>
+  </table>
+    </form>
+</div>
+</div>

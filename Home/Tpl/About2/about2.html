@@ -1,0 +1,21 @@
+<include file="Public:top" />
+<include file="Public:aboutleft" />
+                    	<h2><a href="#">品牌视频</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="#">品牌视频</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                        <volist name="a" id="vo">
+                            <img src="{$vo.attachment}"/>
+                        </volist>
+                    </div>
+                </div>
+            </div>
+            <include file="Public:end" />

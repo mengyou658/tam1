@@ -1,0 +1,36 @@
+@charset "utf-8";
+* { margin: 0px; padding: 0px; }
+
+body { margin:0 auto;-webkit-text-size-adjust:none; font-family:"微软雅黑";   font-size:12px;text-align:left; color:#333; background:#fff; }
+
+ul, li { list-style: none; }
+
+/*login start*/
+.login_index{ width:100%; float:left; background: url(../images/login/login_bg.jpg) left top no-repeat; padding:150px 0 50px 0;}
+.login{ width:980px; margin:0 auto; }
+.login_box{ width:980px; float:left;}
+.login_logo{ width:380px; height:100px; float:left; padding:70px 0 0 20px;}
+.login_right{ width:430px; float:right; background: url(../images/login/login_jg.jpg) left top no-repeat; padding-left:50px;}
+.login_title{ display:inline-block; margin-top:20px; line-height:24px; font-size:14px; color:#000000; padding-bottom:10px; padding-left:20px; width:410px; background:url(../images/login/login_icon.jpg) 2px 5px no-repeat;}
+.regist_list_input{ display:inline-block; width:250px; height:30px; line-height:30px; padding:0 5px; border:0;background:url(../images/login/register_input.jpg) right center no-repeat; color:#333;float:left; }
+.regist_list_code{display:inline-block; width:111px; height:30px; line-height:30px; margin-left:2px;  border:0;background:url(../images/login/register_code.jpg) right center no-repeat; text-align:center; float:left;}
+.login_list li.login_list_pm{ padding-top:15px;}
+.regist_name_z{float:left; width:50px;padding-right:10px;}
+.regist_list_btn{ display:inline-block; width:122px; height:31px; text-align:center; line-height:31px; border:0;background:url(../images/login/register_btn.jpg) right center no-repeat; cursor:pointer; font-size:14px; color:#fff; font-weight:bold;  }
+.regist_table_right_p{ float:right; padding-right:90px;margin-top:130px; }
+.regist_list_input_2{ display:inline-block; width:144px; height:28px; line-height:28px; padding:5px; border:0; background:none; border:1px solid #e2e2e2; color:#333; font-size:12px;}
+
+.regist_name{ float:left; padding-right:5px; line-height:38px; color:#797878; text-align:right;}
+.login_list li{ width:100%; padding-top:10px; float:left;}
+.login_list li.login_list_pm{ padding-top:15px;}
+.login_btn{ display:inline-block; border:0; width:113px; height:32px; text-align:center; line-height:32px; background:url(../images/login/login_button_2.jpg) left center  no-repeat; font-size:14px; font-weight:bold; color:#fff; cursor:pointer; margin-right:10px; }
+.login_btn_right{ display:inline-block; border:0; width:113px; height:32px; text-align:center; line-height:32px; background:url(../images/login/login_button_2.jpg) left center  no-repeat; font-size:14px; font-weight:bold; color:#fff; cursor:pointer; }
+.login_list_pm_line{ display:inline-block; border-top:1px solid #f0f0f0; padding-top:4px; width:270px;}
+.login_f12{ font-size:12px;  padding-left:5px; line-height:38px; color:#d8000f;}
+.login_f12 a{color:#797878;}
+.login_f12 a:hover{color:#d8000f;}
+.login_yzm{ width:80px; height:30px; padding:5px 0 0 10px; float:left;}
+
+.login_footer{ width:980px; float:left; line-height:25px; padding-top:70px; font-size:12px; color:#999999; text-align:center;}
+/*login end*/
+#result {letter-spacing:2px;border:1px solid #d4d4d4; background:#FFC; padding:8px 12px; margin:2px 15px; line-height:185%; color:#393939; font-weight:bold;float:auto; width:85%;display:none;}

@@ -1,0 +1,71 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+<div class="list">
+
+    <div class="RootName">{$Rs.name} <eq name="Rs['issys']" value="1"><img src="__PUBLIC__/admin/images/icon_sys.gif"></eq></div>
+	<div class="line1px"></div>
+
+	<form name="formList" method="post" action="__URL__/upTpl" id="formList">
+    <table width="100%%"  border="0" align="center">
+    <tr align="center">
+      <th width="5%">选择</td>
+      <th>字段标题</td>
+      <th width="12%">字段名称</td>
+      <th width="6%">顺序</td>
+      <th width="6%">必填</td>
+      <th width="6%">列表展示</td>
+      <th width="6%">汇出</td>
+      <th width="5%">修改</td>
+      <th width="5%">删除</td>
+    </tr>
+    </table>	
+	<volist name="GroupRs" id="GroupRs">
+      <div class="RootName"><input name="GroupID[]" type="checkbox" value="{$GroupRs.id}" <eq name="Rs['Group'][$GroupRs['id']]" value="$GroupRs['id']">checked</eq>> &nbsp;
+      <input type="hidden" name="GID[]" value="{$GroupRs.id}" id="GID[]" />
+      <input type="text" name="GroupName[]" value="<eq name="Rs['Group'][$GroupRs['id']]" value="$GroupRs['id']">{$Rs['GName'][$GroupRs['id']]}<else/>{$GroupRs.name}</eq>"/>
+	  </div>
+	<div class="line1px"></div>
+      <table width="100%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+	  <volist name="GroupRs.DRs" id="DRs">
+        <tr align="center" bgcolor="#FFFFFF">
+          <td width="5%"><input name="FieldID[]" type="checkbox" value="{$DRs.id}" <eq name="Rs['Field'][$DRs['id']]" value="$DRs['id']">checked</eq>><input name="upID[]" type="hidden" value="{$DRs.id}"></td>
+          <td align="Left"><input type="text" value="<eq name="Rs['Field'][$DRs['id']]" value="$DRs['id']">{$Rs['FTitle'][$DRs['id']]}<else/>{$DRs.name}</eq>" name="name[]" style="width:150px" /> <eq name="DRs['issys']" value="1"><img src="__PUBLIC__/admin/images/icon_sys.gif"></eq></td>
+          <td width="12%"><input type="text" value="{$DRs.fieldName}" name="fieldName[]" style="width:100px"  readonly="readonly" /></td>
+          <td width="6%"><input type="text" value="{$DRs.sort}" name="sort[]" style="width:40px"/></td>
+          <td width="6%" bgcolor="#FFFFFF">
+            <eq name="DRs['iswrite']" value="1">是</eq>
+            <eq name="DRs['iswrite']" value="0"><font style="color:#FF0000">否</font></eq>
+          </td>
+          <td width="6%" bgcolor="#FFFFFF">
+            <eq name="DRs['islist']" value="1">是</eq>
+            <eq name="DRs['islist']" value="0"><font style="color:#FF0000">否</font></eq>
+          </td>
+          <td width="6%" bgcolor="#FFFFFF">
+            <eq name="DRs['isout']" value="1">是</eq>
+            <eq name="DRs['isout']" value="0"><font style="color:#FF0000">否</font></eq>
+          </td>
+          <td width="5%" bgcolor="#FFFFFF"><a href="__URL__/fieldAE/id/{$DRs.id}/mid/{$Rs.id}"><img src="__PUBLIC__/admin/images/write.gif" width="17" height="16" border="0"></a></td>
+          <td width="5%" bgcolor="#FFFFFF"><a href="javascript:;"  onClick="delField({$DRs.id},{$Rs.id});"><img src="__PUBLIC__/admin/images/del.gif" width="17" height="16" border="0"></a></td>
+        </tr>
+		</volist>
+      </table>
+	 </volist>
+<div class="line10px">&nbsp;</div>
+<div class="Center">
+  <input name="TplID" type="hidden" id="TplID" value="{$Rs.id}"> 
+  <input type="submit" name="Submit2" value=" 保存 " class="btn_b" onClick="if(!confirm('真的进行保存吗？')) return false;">
+  <input type="button" name="Submit3" value=" 修改模版 " onClick="if(!confirm('真的要修改吗？')) return false;SubmitAction(document.formList,'__URL__/saveTpl')" class="btn_b">
+  <input type="button" name="Submit4" value=" 新增字段 " class="btn_b" onclick="location.href='__URL__/fieldAE/mid/{$Rs.id}'" />
+</div>
+    </form>
+    </div>
+ </div>
+  <script>
+ 
+ function delField(id,mid) {
+	if(!confirm('真的删除该字段吗？')) return false;
+	location.href='__URL__/fieldDel/id/'+id+'/mid/'+mid 
+ }
+ </script>

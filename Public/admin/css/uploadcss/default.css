@@ -1,0 +1,9 @@
+*{padding:0;margin:0;}
+.fileQueue {width:375px;height:120px;overflow: auto;border: 1px solid #999;margin:5px;float:left; padding:10px;}
+.upload_btn-group{width:120px;margin:5px; padding-bottom:5px;float:left;}
+.upload_btn{text-decoration:none;width:110px;height:30px;display:block;background:#515151;margin:10px 0;text-align:center;font:14px/2em 'Î¢ÈíÑÅºÚ';color:#fff !important;}
+.upload_btn:hover{background:#333;font-weight:bold;}
+.outser{ width:100%; margin:0 auto; float:left}
+.outser dl{ width:125px; float:left; margin:10px 10px;}
+.outser dt img{ border:1px solid #8a8686;}
+.outser dd{ text-align:center; float:left;}

@@ -1,0 +1,28 @@
+ <include file="Public:top" />
+    <!--content-->
+ <include file="Public:aboutleft" />
+                    	<h2><a href="#">集团介绍</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="#">集团介绍</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                    	<table cellpadding="6" class="jituan_table">
+                        	<tr>
+                            	<td valign="top" align="left">
+                                    <php>echo stripslashes($sys['about']);</php>
+                                </td>
+                                <td valign="top" align="left"><div><img src="{$aboutImage.attachment}"/></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <include file="Public:end" />

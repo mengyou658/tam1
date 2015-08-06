@@ -1,0 +1,138 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+    
+<div class="search" id="serach">
+    <form method="get" name="searchform" id="searchform" action="__URL__">
+    	Keyword：
+        <input name="keyword" type="text" id="keyword" class="txt" value="{$Think.get.keyword}" /> 
+        &nbsp;  
+  		<select name="field" id="field">
+        <option value="name" <eq name="Think.get.field" value="name"> selected</eq>>Name</option>
+        <option value="email" <eq name="Think.get.field" value="email"> selected</eq>>Email</option>
+        <option value="content" <eq name="Think.get.field" value="content"> selected</eq>>Message</option>
+        </select>
+        &nbsp;  
+        Date From：<input name="startTime" id="startTime" type="text" value="{$Think.get.startTime}">
+                    <script type="text/javascript">
+                        RANGE_CAL_1 = new Calendar({
+                            inputField: "startTime",
+                            dateFormat: "%Y-%m-%d",
+                            trigger: "startTime",
+                            bottomBar: false,
+                            onSelect: function() {
+                                  this.hide();
+                             }
+                        });
+                    </script>
+        &nbsp;
+        To：<input name="endTime" id="endTime" type="text" value="{$Think.get.endTime}">
+				<script type="text/javascript">
+                    RANGE_CAL_1 = new Calendar({
+                        inputField: "endTime",
+                        dateFormat: "%Y-%m-%d",
+                        trigger: "endTime",
+                        bottomBar: false,
+                        onSelect: function() {
+                              this.hide();
+                         }
+                    });
+                </script>
+       &nbsp;
+        Per page：
+        <select name="thisPage">
+            <option value="10" <eq name="thisPage" value="10">selected="selected"</eq>>10</option>
+            <option value="15" <eq name="thisPage" value="15">selected="selected"</eq>>15</option>
+            <option value="20" <eq name="thisPage" value="20">selected="selected"</eq>>20</option>
+            <option value="30" <eq name="thisPage" value="30">selected="selected"</eq>>30</option>
+            <option value="50" <eq name="thisPage" value="50">selected="selected"</eq>>50</option>
+            <option value="100" <eq name="thisPage" value="100">selected="selected"</eq>>100</option>
+        </select>
+        &nbsp;
+        <input type="submit" value="Search" class="btn_s" />
+	</form>
+  <div id="search_auto"></div>
+	
+  </div>
+<div class="line10px"></div>
+<present name="list">
+<div class="list">
+<form name="form1" method="post" action="__URL__/submit">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th class="line_l"><input type="checkbox" id="checkbox_handle"
+                        onclick="checkAll(this)" value="0">Number</th>
+        <volist name='listFileds' id='listFileds'>
+        <th class="line_l">{$listFileds.name}</th>
+        </volist>
+        <th>Add time </th>
+        <th>Status</th>
+      </tr>
+      
+      <volist id="list" name="list" key="k">
+          <tr overstyle='on' id="app{$list.id}">
+            <td class="mainTitle"><input type="checkbox" name="actID[]" id="actID[]" onclick="chkon(this)" value="{$list['id']}"> {$list['id']}</td>
+            <volist name='showDate' id='show'>
+            <td>
+            <php>
+                echo outDateList($show['formType'] , $list[$show['fieldName']]);
+            </php>
+            </td>
+            </volist>
+            <td>{$list.postdate|date="Y-m-d H:i:s",###}</td>
+            <td nowrap="nowrap"><a href="__URL__/edit/id/{$list.id}"><if condition="$list['isgood'] eq 0"><span class="need">Unread</span><else />Read</if></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delItem('{$list.id}','__URL__/doDelete');">Delete</a></eq>
+            </td>
+          </tr>
+      </volist>
+      </table>
+      <table>
+      	<tr>
+            <td bgcolor="#FFFFFF" height="35"><font color="red">Option：</font>
+            <input name="act" type="radio" value="delete" class="checkbox"/>
+            Delete
+            <input name="submit" type="submit" class="btn_s" onclick="return confirm('Sure you want to submit?');" value="Submit"/>
+            </td>
+        </tr>
+      </table>
+    </form> 
+</div>  
+
+  <div class="Toolbar_inbox">
+      <div class="page right">{$page}</div>
+      </div>
+  </div>
+  <else/>
+  	<div class="Toolbar_inbox">
+      		<div class="msg">No data</div>
+      </div>
+  </div>
+  </present>
+</div>
+<script language="javascript">
+
+$(function(){
+	$("#cid").change(function(){
+			$('#keyword').trigger('keyup');
+	})
+	
+	$('#keyword').keyup(function(){
+		var cid = $("#cid").val();
+		
+		$.post('__URL__/search_auto/do/search',{'value':$(this).val() , 'cid' : cid},function(data){
+			if(!data) $('#search_auto').html("").css('display','none');
+			else $('#search_auto').html(data).css('display','block');
+		});
+	});
+});
+
+function insertIt(id){
+	var kval=$("#s_"+id).html();
+	$("#keyword").val(kval);
+	$('#search_auto').html("").css('display','none');
+	document.searchform.submit();
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+    <meta  charset="utf-8" />
+    <title><neq name="sys.indexTitle" value="">{$sys.indexTitle}<else />{$sys.title}</neq></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/{$lang}/css/public.css">
+    <script src="__PUBLIC__/{$lang}/js/jquery-1.7.2.min.js" type="text/javascript" language="javascript"></script>
+    <script src="__PUBLIC__/{$lang}/js/zzsc.js" type="text/javascript" language="javascript"></script>
+</head>
+
+<body>
+<div class="info">
+    <!--logo ang nav-->
+    <div class="logo_nav width1">
+        <div class="logo  left">
+            <a href="#"><img src="{$sys.logo}"/></a>
+        </div>
+        <div class="nav right">
+            <div class="select_company"><span class="active"><a href="#"><img src="Public/en/images/logosmall.png"/>伊丝娃儿时装公司</a></span><span><a href="#"><img src="Public/en/images/logosmall.png"/>伊丝娃儿文化传媒公司</a></span></div>
+            <div class="navlist">
+                <ul>
+                    <li class="navfirt"><a href="index.html"><P>首页</P><span>HOME</span></a></li>
+                    <li><a href="about.html"><P>关于凯莉娅</P><span>ABOUT KARLIA</span></a></li>
+                    <li><a href="news.html"><P>时尚资讯</P><span>FASHION NEWS</span></a></li>
+                    <li><a href="product.html"><P>产品展示</P><span>PRODUCTS</span></a></li>
+                    <li><a href="about4.html"><P>加盟专区</P><span>JOIN US</span></a></li>
+                    <li><a href="contact.html"><P>联系我们</P><span>CONTACT US</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="neiye_banner">
+        <div class="neiye_img">
+            <div class="neiyetopimg">
+                <volist name="lists1" id="vo">
+                    <a  href="javascript:;" ><img src="{$vo.attachment}"/></a>
+                </volist>
+                <
+            </div>
+        </div>
+
+    </div>

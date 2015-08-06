@@ -1,0 +1,36 @@
+<include file="Public:_header"/>
+<script>
+function fold(index) {
+  	$('#app_'+index).slideToggle('fast');
+}
+</script>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+<!--<div class="page_tit">温馨提示：点击主标题可折叠栏目 </div>-->
+<form method="post" name="form1" action="__URL__/updates"  enctype="multipart/form-data">
+<div class="list">
+	<volist name="groupRs" id="groupRs" key="gkey">
+        <div class="RootName" onclick="fold('{$gkey}');">{$groupRs.name}</div>
+        <div class="line1px"></div>
+        <table id="app_{$gkey}">
+           <tr overstyle="on">
+            <volist name="groupRs.DRs" id="DRs" key="k">
+                <td width="{$lines.0}" align="right">{$DRs.nameStr}</td>
+                <td width="{$lines.1}" align="left">{$DRs.FieldNameStr}</td>
+                <if condition="$k % $mTpl['perLine'] eq 0"></tr><tr overstyle="on"></if>
+            </volist> 
+            </tr>
+            <tr overstyle='on'>
+                <td></td>
+                <td>
+                    <input class="btn_b" type="submit" name="Submit2" value=" Submit ">
+            	</td>
+            </tr>
+         </table> 
+     </volist>  
+     <input type="hidden" name="lang" value="{$lang}" />
+     </div>
+ </form> 
+</div> 
+</body>
+</html>

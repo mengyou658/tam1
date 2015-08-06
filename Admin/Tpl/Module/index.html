@@ -1,0 +1,74 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+<div class="list">
+	<div class="Toolbar_inbox">模版列表</div>
+	<div class="spaceLine"></div>
+      <table>
+        <tr overstyle='on'>
+          <th width="10%">查看</td>
+          <th>名称</td>
+          <th width="8%">版块</td>
+          <th width="5%">排序</td>
+          <th width="5%">每行</td>
+          <th width="15%">操作</td>
+          <th width="8%">字段分组</td>
+          </tr>
+		 <volist name="list" id="list">
+        <tr  overstyle='on'>
+          <td align="left"><a href="__URL__/moduleFields/id/{$list.id}">管理模版</a> <eq name="list['issys']" value="1"><img src="__PUBLIC__/images/icon_sys.gif"></eq></td>
+          <td>{$list.name}</td>
+          <td>{$list.module}</td>
+          <td>{$list.sort}</td>
+          <td>{$list.perLine}</td>
+          <td>
+              <a href="javascript:;" onClick="document.form2.name.value='{$list.name}';document.form2.module.value='{$list.module}';document.form2.oldtb.value='{$list.module}';document.form2.sort.value='{$list.sort}';document.form2.id.value='{$list.id}';document.form2.perLine[0].value='{$list.perLine}';document.form2.perLine[0].text='{$list.perLine}';"><img src="__PUBLIC__/admin/images/write.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:;" onclick="delTpl({$list.id});" ><img src="__PUBLIC__/admin/images/no.gif"></a>
+          </td>
+          <td><a href="__URL__/moduleGroup/gid/{$list.id}"><img src="__PUBLIC__/admin/images/icon_group.png"></a></td>
+          </tr>
+		  </volist>
+      </table>
+    <div class="spaceLine"></div>
+	<div class="Toolbar_inbox">新增模版</div>
+	<div class="spaceLine"></div>
+	
+	<form name="form2" id="form2" method="post" action="__URL__/TplAE" onSubmit="return CheckForm(this)">
+	  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">模版名称：
+            <input name="name" id="name" type="text" size="30" check="^\S+" warning="请填写模版名称">
+            版块：
+            <input name="module" id="module" type="text" value="{$Think.get.tb}" check="^\S+" warning="请填写版块" size="10">
+            排序：
+            <input name="sort" id="sort" type="text" value="1" size="10">
+            每行数据：
+            <select name="perLine">
+            	<option value="1">1</option>
+            	<option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="hidden" name="oldtb" value="" id="oldtb" />
+            <input type="hidden" name="id" id="id" value="" />
+            <input type="submit" class="btn_b" name="Submit" value=" 提 交 "></td>
+        </tr>
+      </table>
+    </form>
+    <div class="Toolbar_inbox">
+      <div class="page right">{$page}</div>
+      </div>
+    </div>
+ </div>
+<script>
+function delTpl(tid) {
+	if(confirm("警告!确定删除模版吗?\r\n删除模版将会清空该模块下的所有信息")==true) {
+		if(confirm("删除操作不可还原，确定删除？")==true) {
+			location.href = "__URL__/TplDel/id/"+tid;
+		}
+	}
+}
+</script>

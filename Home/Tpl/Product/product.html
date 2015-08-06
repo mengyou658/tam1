@@ -1,0 +1,25 @@
+<include file="Public:top" />
+<include file="Public:productleft" />
+    <!--content-->
+
+                    	<h2><a href="#">产品展示</a></h2>
+                        <ul>
+                        	<li><a href="index.html">首页</a></li>
+                            <li><a href="#">产品展示</a></li>
+                        </ul>
+                        <script type="text/javascript">
+							  $(function(){
+								  $('.rightbar_top ul li:last').css({"background":"none","padding-right":"0px"});
+								        })
+						 </script>
+                    </div>
+                    <div class="rightbar_bottom">
+                        <volist name="a" id="vo">
+                            <div class="pro1"><a href="#"><img src="{$vo.attachment}"/></a></div>
+                        </volist>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <include file="Public:end" />

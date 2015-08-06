@@ -1,0 +1,61 @@
+<include file="Public:_header"/>
+<div class="so_main">
+<include file="Public:menu_nav"/>
+
+<div class="page_tit">系统菜单管理  [ <a href="javascript:void(0);" class="btn_a" onclick="addSysMenu();"><span>新增菜单</span></a> ]</div>
+   
+  <div class="list">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th style="width:30px;">
+        <input type="checkbox" id="checkbox_handle" onclick="checkAll(this)" value="0">
+        <label for="checkbox"></label>
+    </th>
+    <th class="line_l">菜单名称</th>
+    <th class="line_l" width="250">链接</th>
+    <th class="line_l" width="150">排序</th>
+    <th class="line_l" width="150">状态</th>
+    <th class="line_l" width="380">操作</th>
+  </tr>
+  <volist id="vo" name="MenuList">
+      <tr overstyle='on' id="app{$vo.id}">
+        <td><input type="checkbox" name="checkbox" id="checkbox2" onclick="checkon(this)" value="{$vo['id']}"></td>
+        <td class="mainTitle">{$vo.name}</td>
+        <td class="mainTitle">{$vo.url}</td>
+        <td class="mainTitle">{$vo.sort}</td>
+        <td class="mainTitle"><eq name="vo['ischecked']" value="1">正常<else/>锁定</eq></td>
+        <td><a href="javascript:void(0);" onclick="addSysMenu({$vo.id});">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delMenu('{$vo.id}');">删除</a>
+        </td>
+      </tr>
+      <volist id="DRs" name="vo.DRs">
+      <tr overstyle='on' id="app{$DRs.id}">
+        <td><input type="checkbox" name="checkbox" id="checkbox2" onclick="checkon(this)" value="{$DRs['id']}"></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;|--{$DRs.name}</td>
+        <td>{$vo.url}/{$DRs.url}</td>
+        <td>{$DRs.sort}</td>
+        <td><eq name="DRs['ischecked']" value="1">正常<else/>锁定</eq></td>
+        <td><a href="javascript:void(0);" onclick="addSysMenu({$DRs.id});">修改</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="delItem('{$DRs.id}','__URL__/doDeleteMenu');">删除</a>
+        </td>
+      </tr>
+  	</volist>
+  </volist>
+  </table>
+
+  </div>
+ <div class="Toolbar_inbox">
+    <a href="javascript:void(0);" class="btn_a" onclick="delItem('','__URL__/doDeleteMenu');"><span>删除菜单</span></a>  <a href="javascript:void(0);" class="btn_a" onclick="addSysMenu();"><span>新增菜单</span></a>
+  </div>
+</div>
+
+<script>	
+//添加修改系统菜单
+function addSysMenu(gid)
+{
+	var title = gid?'修改菜单':'新增菜单';
+	gid = gid? gid:'';
+	ui.box.load( "__URL__/add_menu/gid/"+ gid,{title:title});
+}  
+</script>
+</div>
+</body>
+</html>
